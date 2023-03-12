@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:ital,wght@400;0,500;1,100;1,300;1,400&family=Titillium+Web:wght@200&display=swap');
+.navegation a {
+    font-size: 25px;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-collapse li {
+    padding-left: 30px;
+    margin-right: 30px;
+}
+
+.minhaContaPrincipal {
+    display: flex;
+    align-items: center;
+}
+
+.minhaContaPrincipal img {
+    height: 50px;
+    padding-left: 90px;
+}
+
+.carrinhoPrincipal {
+    display: flex;
+    align-items: center;
+}
+
+.carrinhoPrincipal img {
+    height: 50px;
+    padding-left: 50px;
+    padding-right: 130px;
+}
+
+
+/* ---------- css bootstrap form -----------*/
+
+body {
+    background-color: #E4D1BA;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(40px);
+    padding: 30px;
+    width: 560px;
+    border-radius: 2%;
+    font-size: 20px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.btn {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
+    color: black;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn:hover {
+    background-color: lightgray;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.form-control:hover {
+    border-color: lightgray;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.col h1 {
+    text-shadow: 0.7px 1.2px black;
+}
+
+col a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.imgLogin {
+    display: flex;
+    align-items: center;
+}
+@media (min-width: 1025px) {
+    .h-custom {
+    height: 100vh !important;
+    }
+    }
+    
+    .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+    
+    .bg-grey {
+    background-color: #eae8e8;
+    }
+    
+    @media (min-width: 992px) {
+    .card-registration-2 .bg-grey {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    }
+    }
+    
+    @media (max-width: 991px) {
+    .card-registration-2 .bg-grey {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    }
+    }
