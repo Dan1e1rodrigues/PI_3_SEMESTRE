@@ -1,0 +1,51 @@
+#img1{
+    float: left;
+}
+
+.bicicleta-lista > ul{
+    list-style: none;
+}
+
+/*Link do css lista*/
+.moto > ul {
+    list-style: none;
+}
+
+.moto li{
+    display: inline;
+}
+
+.carousel-caption {
+    position: static;
+    width: 100%;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.botao{
+    text-align: center;
+}
+
+.produtos{
+    width: 100%;
+    margin-top: 10px;
+    /*Alinhamento do texto...*/
+    text-align: center;
+    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir 
+    coloca o padding que ele vai ajudar*/
+    padding: 10%;
+}
+
+#floater{
+    background-color: black;
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+}
+
+/*Essa faz com que a lista seja removida*/
+li{
+    list-style:none
+}
