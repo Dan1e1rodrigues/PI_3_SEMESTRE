@@ -49,3 +49,8 @@
 li{
     list-style:none
 }
+
+.navbar-brand{
+    color:#8c84fc;
+    padding: 1%;
+}
