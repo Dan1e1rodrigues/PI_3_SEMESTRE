@@ -18,10 +18,13 @@
 .carousel-caption {
     position: static;
     width: 100%;
+    background-color: blue;
 }
 
 .center-content {
     text-align: center;
+    background-color: aqua;
+    padding: 2%;
 }
 
 .botao{
@@ -36,6 +39,16 @@
     /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir 
     coloca o padding que ele vai ajudar*/
     padding: 10%;
+}
+
+.produtos02{
+    width: 100%;
+    margin-top: 10px;
+    /*Alinhamento do texto...*/
+    text-align: center;
+    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir 
+    coloca o padding que ele vai ajudar*/
+    padding: 5%;
 }
 
 #floater{
