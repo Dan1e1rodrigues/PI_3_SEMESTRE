@@ -1,3 +1,7 @@
+body{
+    
+}
+
 #img1{
     float: left;
 }
@@ -54,3 +58,19 @@ li{
     color:#8c84fc;
     padding: 1%;
 }
+
+.dropdown-menu{
+    text-align: center;
+}
+
+.title-secundary{
+border-bottom: 4px solid #000;
+color: #000;
+display: inline-block;
+padding-top: 4px;
+line-height: 34px;
+font-family: 'roboto_condensed_bold';
+font-size: 20px;
+text-transform: uppercase;
+}
+
