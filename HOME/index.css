@@ -18,13 +18,13 @@
 .carousel-caption {
     position: static;
     width: 100%;
-    background-color: blue;
+    background-color: rgb(62, 59, 59);
 }
 
 .center-content {
     text-align: center;
-    background-color: aqua;
-    padding: 2%;
+    background-color: rgb(62, 59, 59);
+    padding: 3%;
 }
 
 .botao{
