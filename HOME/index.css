@@ -18,12 +18,12 @@
 .carousel-caption {
     position: static;
     width: 100%;
-    background-color: rgb(62, 59, 59);
+    background-color: #1C8394;
 }
 
 .center-content {
     text-align: center;
-    background-color: rgb(62, 59, 59);
+    background-color: #1C8394;
     padding: 3%;
 }
 
@@ -95,10 +95,11 @@ text-transform: uppercase;
 }
 
 /* Cores do navbar editar para o padrão do PI & E-commerce*/
+/* Confirmar o esquema de cores, montar o padrão*/
 :root{
     --bg-color:#fff; 
-    --text-color: #070707;
-    --main-color: #29fd53;
+    --text-color: #1C8394;
+    --main-color: #A52502;
 }
 
 body{
@@ -129,6 +130,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 /*Logo ICON editar aqui*/
@@ -151,13 +153,16 @@ header{
     list-style: none;
 }
 
+/* Caso ocorra a necessidade de alterar o tamanho da letra altere por margin, pois caso ela fique com 
+o tamanho muito grande irá quebrar a página */
 .navbar a{
     color: var(--text-color);
     font-size: 1.1rem;
     font-weight: 500;
     padding: 5px 0;
-    margin: 0px 30px;
+    margin: 0px 15px;
     transition: all .50s ease;
+    text-decoration: none;
 }
 
 .navbar a:hover{
