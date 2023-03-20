@@ -118,7 +118,7 @@ header{
     /*Depois daqui teremos alteraçoes de posição*/
     justify-content: space-between;
     background: transparent;
-    padding: 28px 12%;
+    padding: 28px 5%;
     transition: all .50s ease;
 }
 
@@ -133,14 +133,14 @@ header{
 /*Logo ICON editar aqui*/
 .logo i{
     color: var(--main-color);
-    font-size: 28px;
+    font-size: 20px;
     margin-right: 3px;
 }
 
 /*TEXT da logo editar aqui*/
 .logo span{
     color: var(--text-color);
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
@@ -222,7 +222,7 @@ header{
     }
     .navbar{
         position:absolute;
-        top:100%;
+        top:50%;
         right: -100%;
         width: 270px;
         height: 29vh;
@@ -255,6 +255,9 @@ header{
     }
 }
 
+.pesquisa{
+    text-align: center;
+}
 
 
 
