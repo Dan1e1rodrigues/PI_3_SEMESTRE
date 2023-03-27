@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;1,100;1,300;1,400&family=Titillium+Web:wght@200&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 5em;
+}
+
+.menu-itens a img {
+    width: 2em;
+}
+
+.menu-itens a {
+    margin-left: 1.5em;
+}
+
+.content {
+    height: 86vh;
+    width: 100%x;
+    padding: 0 2em;
+    display: flex;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.left-side h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.left-side p {
+    margin-bottom: 50px;
+}
+
+.left-side p,
+li {
+    font-weight: 600;
+}
+
+.list-group {
+    background-color: aqua;
+}
+
+.left-side span {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.left-side a {
+    text-decoration: none;
+    font-weight: 600;
+    width: fit-content;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.right-side {
+    width: 100%;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px 2px gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.right-side img {
+    height: 350px;
+}
