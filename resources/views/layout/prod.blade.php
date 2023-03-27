@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Link CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen"/>
 
     <!-- Link Favicon -->
@@ -22,7 +23,7 @@
     <!-- Link do favcon -->
     <link rel="shortcut icon" href="./LOGO/logo-favicon.png" type="image/x-icon">
 
-    <title>Delta</title>
+    <title>{{$produto->PRODUTO_NOME}}</title>
 </head>
     <body>
 
