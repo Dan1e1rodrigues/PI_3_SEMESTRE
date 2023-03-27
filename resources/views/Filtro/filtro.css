@@ -1,0 +1,19 @@
+.filtro, .produtos {
+    float: left;
+}
+
+.filtro {
+    width: 16%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.produtos {
+    width: 82%;
+    margin-top: 5px;
+}
+
+.main {
+    /*display: flex;
+    flex-direction: row;*/
+}
