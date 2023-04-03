@@ -108,10 +108,12 @@
             </div>
           </div>
 
-          <!--Card-->
+          <!--Linha PRODUTOS EM DESTAQUE-->
           <section class="produtos">
             <span class="title-secundary">Produtos em Destaque</span>
             <hr>
+
+            <!-- CARD -->
             <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach(\App\Models\Produto::all()->take(6) as $produto)    
                 <div class="col">
