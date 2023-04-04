@@ -53,7 +53,7 @@
                     <input class="form-control me-2" type="search"  aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
-
+                
                 <a href="../LOGIN/index.html" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
 
                 <a href="../CADASTRO/index.html" class="bxmenu">Criar conta</a>

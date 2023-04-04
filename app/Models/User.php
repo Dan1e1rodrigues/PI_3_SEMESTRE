@@ -17,10 +17,11 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
+    protected $fillable = [ // CAMPO VAZIO PRA PREENCHER
+        'USUARIO_NOME',
+        'USUARIO_EMAIL',
+        'USUARIO_SENHA',
+        'USUARIO_CPF'
     ];
 
     /**
@@ -28,9 +29,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $hidden = [
-        'password',
-        'remember_token',
+    protected $hidden = [ // NUNCA VAI MOSTRAR A SENHA EM TELA
+        'USUARIO_SENHA'
     ];
 
     /**
@@ -38,7 +38,7 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+        protected $table = "USUARIO";
+        protected $primaryKey="USUARIO_ID";
+        public $timestamps =  false;
 }

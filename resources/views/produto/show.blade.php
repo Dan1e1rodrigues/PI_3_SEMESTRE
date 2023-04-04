@@ -29,7 +29,7 @@
                         <li class="list-group-item">{{$produto->Categoria->CATEGORIA_NOME}}</li>
                     </ul>
                 </p>
-                <span>Quantidade disponivel:{{$produto->ProdutoEstoque}}</span>
+                <span>Quantidade disponivel:{{$produto->ProdutoEstoque->PRODUTO_ESTOQUE}}</span>
                 <span>Valor original:R${{$produto->PRODUTO_PRECO}} </span>
                 <span>Desconto:R${{$produto->PRODUTO_DESCONTO}}</span><br><br>
               <!--  <span>{{\App\Models\Categoria::find($produto->CATEGORIA_ID)->Produtos}}</span>-->
@@ -43,7 +43,7 @@
             </div>
 
             <div class="right-side">
-                <div class="img"> <img src=""></div>
+                <div class="img"> <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt=""></div>
             </div>
         </div>
     </main>
