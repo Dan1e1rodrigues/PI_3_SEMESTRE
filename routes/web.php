@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//criar rota para login e cadastro,
 Route::get('/produto',[ProdutoController::class,'index']);// controllee-class-funcão dentro da controller(site)
 Route::get('/produto/{produto}',[ProdutoController::class,'show'])->name('produto.show');//aqui , no servidor, será produto/1
 

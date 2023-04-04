@@ -54,9 +54,9 @@
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
-                <a href="../LOGIN/index.html" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
+                <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
 
-                <a href="../CADASTRO/index.html" class="bxmenu">Criar conta</a>
+                <a href="/register" class="bxmenu">Criar conta</a>
                 <div class="bx bx-menu" id="menu-icon"></div> 
             </div>
         </header>
