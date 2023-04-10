@@ -29,12 +29,12 @@
         <!-- Barra de navegação -->
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
-            <a href="/img/imagedelta.png" class="logo">
+            <img  src="/img/logoOficial.png" width="13%"class="logo">
                 <!-- Favcon -->
                 <!-- <i class="ri-home-heart-fill"></i> -->
                 <!-- Tex0to -->
-                <span>DELTA</span>
-            </a> 
+
+            </a>
 
             <!--Lista para classificar itens contidos dentro do menu-->
             <!--Pode ser editavel-->
@@ -57,7 +57,7 @@
                 <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
 
                 <a href="/register" class="bxmenu">Criar conta</a>
-                <div class="bx bx-menu" id="menu-icon"></div> 
+                <div class="bx bx-menu" id="menu-icon"></div>
             </div>
         </header>
         <!-- FIM NAVBAR -->
