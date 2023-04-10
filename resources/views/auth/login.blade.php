@@ -40,9 +40,6 @@
     <p id="texto">Caso não possua uma conta, <a href="/register">Criar</a></p>
         <div class="block mt-4">
 
-</body>
-</html>
-
 
 
 
