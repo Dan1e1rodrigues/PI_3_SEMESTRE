@@ -45,7 +45,7 @@
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Promoções</a></li>
             </ul>
-
+            @if(!Auth::check())    
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
@@ -59,6 +59,25 @@
                 <a href="/register" class="bxmenu">Criar conta</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
+            @else
+            <div class="main">
+
+                <!-- Arrumar botão transparente de pesquisa -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search"  aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
+                  </form>
+
+                <span class="user"><i class="ri-user-fill"></i>Olá, {{Auth::user()->USUARIO_NOME}}</span>
+
+                <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Sair') }}
+                            </x-dropdown-link>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+            @endif
         </header>
         <!-- FIM NAVBAR -->
         <main>@yield('main')</main>
