@@ -30,11 +30,11 @@
         <!-- Barra de navegação -->
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
-            <a href="/img/imagedelta.png" class="logo">
+            <img  src="/img/logoOficial.png" width="10%"class="logo">
                 <!-- Favcon -->
                 <!-- <i class="ri-home-heart-fill"></i> -->
                 <!-- Tex0to -->
-                <span>DELTA</span>
+               
             </a> 
 
             <!--Lista para classificar itens contidos dentro do menu-->
