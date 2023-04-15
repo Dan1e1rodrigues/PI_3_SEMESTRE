@@ -46,12 +46,19 @@
             </div>
           </div>
 
-          <!--Card-->
+          <!--Linha PRODUTOS EM DESTAQUE-->
           <section class="produtos">
             <span class="title-secundary">Produtos em Destaque</span>
             <hr>
+<<<<<<< HEAD
             <div class="row row-cols-1 row-cols-md-4 g-4">
             @foreach(\App\Models\Produto::all()->take(5) as $produto)
+=======
+        
+            <!-- CARD -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach(\App\Models\Produto::all()->take(6) as $produto)    
+>>>>>>> daniel-branch
                 <div class="col">
                     <div class="card">
                         <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
