@@ -30,20 +30,16 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        //caso de esse erro, apague o $request-> validate
-        // SQLSTATE[42S22]: Coluna não encontrada: 1054 Coluna desconhecida 'email' em 'where clause' (Conexão: mysql, SQL: select count(*) como agregado de 'USUARIO' onde 'email' = joao@gmail.com)
-
-        // $request->validate([
-        //     'name' => ['required', 'string', 'max:255'],
-        //     'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-        //     'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        // ]);
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
 
         $user = User::create([
-            'USUARIO_NOME' => $request->name,
-            'USUARIO_EMAIL' => $request->email,
-            'USUARIO_SENHA' => Hash::make($request->password),
-            'USUARIO_CPF' => '11111111111'
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
         ]);
 
         event(new Registered($user));
