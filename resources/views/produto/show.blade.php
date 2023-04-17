@@ -37,7 +37,9 @@
                 <!--ira filtrar todos os produtos com a mesma categoria do produto da tela-->
                 <span>Valor do produto com desconto: R${{$produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO}}</span><br><br><br>
 
-                <a class="btn btn-primary" href="#" role="button">ADICIONAR AO CARRINHO</a>
+                <a href="{{route('carrinho.store', $produto->PRODUTO_ID)}}"><button type="submit" id="botaocard">Adicionar ao carrinho</button></a>
+
+
 
 
             </div>
