@@ -17,7 +17,11 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+<<<<<<< HEAD
     protected $fillable = [ // CAMPO VAZIO PRA PREENCHER
+=======
+    protected $fillable = [
+>>>>>>> main
         'USUARIO_NOME',
         'USUARIO_EMAIL',
         'USUARIO_SENHA',
@@ -29,6 +33,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+<<<<<<< HEAD
     protected $hidden = [ // NUNCA VAI MOSTRAR A SENHA EM TELA
         'USUARIO_SENHA'
     ];
@@ -41,4 +46,13 @@ class User extends Authenticatable
         protected $table = "USUARIO";
         protected $primaryKey="USUARIO_ID";
         public $timestamps =  false;
+=======
+    protected $hidden = [
+        'USUARIO_SENHA'
+    ];
+
+    protected $table = "USUARIO";
+    protected $primaryKey = "USUARIO_ID";
+    public $timestamps = false;
+>>>>>>> main
 }

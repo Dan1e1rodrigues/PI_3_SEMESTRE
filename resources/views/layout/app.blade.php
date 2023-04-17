@@ -29,23 +29,23 @@
         <!-- Barra de navegação -->
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
-            <a href="/img/imagedelta.png" class="logo">
+            <img  src="/img/logoOficial.png" width="13%"class="logo">
                 <!-- Favcon -->
                 <!-- <i class="ri-home-heart-fill"></i> -->
                 <!-- Tex0to -->
-                <span>DELTA</span>
-            </a> 
+
+            </a>
 
             <!--Lista para classificar itens contidos dentro do menu-->
             <!--Pode ser editavel-->
             <ul class="navbar">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="/" class="active">Home</a></li>
                 <li><a href="#">Mais vendidos</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Contato</a></li>
                 <li><a href="#">Promoções</a></li>
             </ul>
-
+            @if(!Auth::check())
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
@@ -53,12 +53,36 @@
                     <input class="form-control me-2" type="search"  aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
+<<<<<<< HEAD
                 
                 <a href="../LOGIN/index.html" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
+=======
 
-                <a href="../CADASTRO/index.html" class="bxmenu">Criar conta</a>
-                <div class="bx bx-menu" id="menu-icon"></div> 
+                <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
+>>>>>>> main
+
+                <a href="/register" class="bxmenu">Criar conta</a>
+                <div class="bx bx-menu" id="menu-icon"></div>
             </div>
+            @else
+            <div class="main">
+
+                <!-- Arrumar botão transparente de pesquisa -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search"  aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
+                  </form>
+
+                <span class="user"><i class="ri-user-fill"></i>Olá, {{Auth::user()->USUARIO_NOME}}</span>
+
+                <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Sair') }}
+                            </x-dropdown-link>
+                <div class="bx bx-menu" id="menu-icon"></div>
+            </div>
+            @endif
         </header>
         <!-- FIM NAVBAR -->
         <main>@yield('main')</main>

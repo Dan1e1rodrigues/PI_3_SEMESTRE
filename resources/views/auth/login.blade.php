@@ -40,7 +40,11 @@
             @endif
 
             <x-primary-button class="ml-3">
+<<<<<<< HEAD
                 {{ __('Log in') }}
+=======
+                {{ __('Login') }}
+>>>>>>> main
             </x-primary-button>
         </div>
     </form>

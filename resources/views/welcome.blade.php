@@ -10,14 +10,14 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="d-block center-content">
-                            <img src="./BANNER/banner04.png" alt="..." height="500" >
+                            <img src="{{('/img/bannercrs1.png')}}" alt="..." height="500" >
                         </div>
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="d-block center-content">
-                            <img src="./BANNER/banner2.png" alt="..." height="500" >
+                            <img src="{{('/img/bannercrs2.png')}}" alt="..." height="500" >
                         </div>
                         <div class="carousel-caption d-none d-md-block">
                             <!-- <h5 style="color: rgb(27, 5, 229);">Camisetas esportivas.</h5>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="d-block center-content">
-                            <img src="./BANNER/banner3.png" alt="..." height="500">
+                            <img src="{{('/img/bannercrs3.png')}}" alt="..." height="500">
                         </div>
                         <div class="carousel-caption d-none d-md-block">
                             <!-- <h5 style="color: black;">Camisetas de corrida.</h5>
@@ -46,15 +46,22 @@
             </div>
           </div>
 
-          <!--Card-->
+          <!--Linha PRODUTOS EM DESTAQUE-->
           <section class="produtos">
             <span class="title-secundary">Produtos em Destaque</span>
             <hr>
             <div class="row row-cols-1 row-cols-md-4 g-4">
             @foreach(\App\Models\Produto::all()->take(5) as $produto)
+<<<<<<< HEAD
                 <div class="col">
                     <div class="card">
                     <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="">
+=======
+
+                <div class="col">
+                    <div class="card">
+                        <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
+>>>>>>> main
                         <div class="card-body">
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
                             <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
