@@ -10,14 +10,14 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="d-block center-content">
-                            <img src="./BANNER/banner04.png" alt="..." height="500" >
+                            <img src="{{('/img/bannercrs1.png')}}" alt="..." height="500" >
                         </div>
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="d-block center-content">
-                            <img src="./BANNER/banner2.png" alt="..." height="500" >
+                            <img src="{{('/img/bannercrs2.png')}}" alt="..." height="500" >
                         </div>
                         <div class="carousel-caption d-none d-md-block">
                             <!-- <h5 style="color: rgb(27, 5, 229);">Camisetas esportivas.</h5>
@@ -26,7 +26,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="d-block center-content">
-                            <img src="./BANNER/banner3.png" alt="..." height="500">
+                            <img src="{{('/img/bannercrs3.png')}}" alt="..." height="500">
                         </div>
                         <div class="carousel-caption d-none d-md-block">
                             <!-- <h5 style="color: black;">Camisetas de corrida.</h5>
