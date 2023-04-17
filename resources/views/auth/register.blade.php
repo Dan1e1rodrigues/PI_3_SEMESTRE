@@ -1,4 +1,5 @@
 <x-guest-layout>
+@extends('layout.app')
 <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -46,5 +47,5 @@
 
 
 
- 
+
 </x-guest-layout>
