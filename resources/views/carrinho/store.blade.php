@@ -1,7 +1,7 @@
 @extends('layout.carrinho')
 @section('main')
 
-{{$carrinho}}
+
 
 
 <section class="h-100 h-custom" style="background-color: #d2c9ff;">
