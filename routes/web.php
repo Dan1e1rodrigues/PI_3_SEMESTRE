@@ -2,8 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdutoController;
-use App\Http\Controllers\CarrinhoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
-Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
-
-
 Route::get('/dashboard', function () {
-    return redirect('/dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');//só vai entrar quem estiver autenticado
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -35,18 +29,3 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
-
-
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/produto',[ProdutoController::class,'index']);// controllee-class-funcão dentro da controller(site)
-Route::get('/produto/{produto}',[ProdutoController::class,'show'])->name('produto.show');//aqui , no servidor, será produto/1
-
-//Route::get('/produto/{produto}',[ProdutoController::class,'show']); ao criar uma rota, tambem criamos o caminho para ela ser chamada
-// se n é necessario a model, va direto para a view
-
-// se o arquivo está fora de uma pasta , é só colocar '/'
