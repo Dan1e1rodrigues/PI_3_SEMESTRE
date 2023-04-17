@@ -2,10 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdutoController;
-use App\Http\Controllers\CarrinhoController;
-use App\Http\Controllers\PedidoController;
-use App\Http\Controllers\CategoriaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,8 +28,9 @@ Route::get('/pedido/{pedido}',[PedidoController::class,'show'])->name('pedido.sh
 
 
 Route::get('/dashboard', function () {
-    return redirect('/');
+    redirect('/');
 })->middleware(['auth', 'verified'])->name('dashboard');//só vai entrar quem estiver autenticado
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -20,11 +20,7 @@ class RegisteredUserController extends Controller
      */
     public function create(): View
     {
-<<<<<<< HEAD
-        return view('auth.register');//chama a tela de registro
-=======
         return view('auth.register');
->>>>>>> main
     }
 
     /**
@@ -34,37 +30,22 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        /*
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
-<<<<<<< HEAD
-        */
+
         $user = User::create([
-            'USUARIO_NOME' => $request->name,
-            'USUARIO_EMAIL' => $request->email,
-            'USUARIO_SENHA' => Hash::make($request->password),//hash serve pra criptografar a senha
-            'USUARIO_CPF' =>'11111111111'
-=======
-*/
-        $user = User::create([
-            'USUARIO_NOME' => $request->name,
-            'USUARIO_EMAIL' => $request->email,
-            'USUARIO_SENHA' => Hash::make($request->password),
-            'USUARIO_CPF' =>$request->cpf
->>>>>>> main
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
         ]);
 
         event(new Registered($user));
 
         Auth::login($user);
 
-<<<<<<< HEAD
-        return redirect(RouteServiceProvider::HOME);//home de quem ta logado é a dashboard
-=======
         return redirect(RouteServiceProvider::HOME);
->>>>>>> main
     }
 }
