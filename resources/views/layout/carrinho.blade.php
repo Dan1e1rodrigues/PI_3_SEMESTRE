@@ -8,6 +8,7 @@
     <!-- Link CSS -->
     <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen"/>
 
+
     <!-- Link Favicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
