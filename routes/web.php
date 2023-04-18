@@ -20,12 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
+Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
 
 
 Route::get('/dashboard', function () {
-    return redirect('/dashboard');
+    return redirect('/');
 })->middleware(['auth', 'verified'])->name('dashboard');//só vai entrar quem estiver autenticado
 
 Route::middleware('auth')->group(function () {
