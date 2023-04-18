@@ -8,11 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
-<<<<<<< HEAD
-=======
-use App\Models\User;
->>>>>>> main
-use Illuminate\Support\Facades\Hash;
 
 class LoginRequest extends FormRequest
 {
@@ -46,24 +41,13 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-<<<<<<< HEAD
-        $user= User::where('USUARIO_EMAIL',$this->email)->first();
-        if($user && Hash::check($this::password, $user->USUARIO_SENHA)){
-=======
-        $user = User::where('USUARIO_EMAIL', $this->email)->first();
+        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+            RateLimiter::hit($this->throttleKey());
 
-        if($user && Hash::check($this->password, $user->USUARIO_SENHA)){
->>>>>>> main
-            Auth::login($user);
-        }else{
             throw ValidationException::withMessages([
-                'email' => trans('auth.failed')
+                'email' => trans('auth.failed'),
             ]);
         }
-<<<<<<< HEAD
-=======
-        
->>>>>>> main
 
         RateLimiter::clear($this->throttleKey());
     }

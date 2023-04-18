@@ -2,11 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CarrinhoController;
->>>>>>> main
 
 /*
 |--------------------------------------------------------------------------
@@ -23,17 +20,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
-Route::get('/dashboard', function () {
-    return view('dashboard');
-=======
-Route::get('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
+Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
 
 
 Route::get('/dashboard', function () {
-    return redirect('/dashboard');
->>>>>>> main
+    return redirect('/');
 })->middleware(['auth', 'verified'])->name('dashboard');//só vai entrar quem estiver autenticado
 
 Route::middleware('auth')->group(function () {
@@ -45,11 +37,7 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
-<<<<<<< HEAD
-use App\http\Controllers\ProdutoController;//importar função
-=======
 
->>>>>>> main
 
 Route::get('/', function () {
     return view('welcome');
