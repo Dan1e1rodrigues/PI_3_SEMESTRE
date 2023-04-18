@@ -52,17 +52,12 @@
             <hr>
             <div class="row row-cols-1 row-cols-md-4 g-4">
             @foreach(\App\Models\Produto::all()->take(5) as $produto)
-<<<<<<< HEAD
-                <div class="col">
-                    <div class="card">
-                    <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="">
-=======
 
                 <div class="col">
                     <div class="card">
-                        <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
->>>>>>> main
-                        <div class="card-body">
+                    <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="">
+
+
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
                             <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
                             <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" id="botaocard">Comprar</button></a>
