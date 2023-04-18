@@ -17,5 +17,11 @@ class Carrinho extends Model
         //INNER JOIN PARA PEGAR O PRODUTO
         return $this->belongsTo(Produto::class,'PRODUTO_ID','PRODUTO_ID');
     }
+    protected function setKeysForSaveQuery($query){
+        $query->where('USUARIO_ID', $this->getAttribute('USUARIO_ID'))
+              ->where('PRODUTO_ID', $this->getAttribute('PRODUTO_ID'));
+
+        return $query;
+    }
 }
 

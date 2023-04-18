@@ -71,11 +71,12 @@
 
                 <span class="user"><i class="ri-user-fill"></i>Olá, {{Auth::user()->USUARIO_NOME}}</span>
 
-                <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Sair') }}
-                            </x-dropdown-link>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button text-decoration="none" background="red" onclick="event.preventDefault();this.closest('form').submit();">
+                       <i>Sair</i>
+                    </button>
+                </form>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
             @endif
