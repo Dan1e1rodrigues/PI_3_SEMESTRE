@@ -36,14 +36,24 @@
 
                 <!--ira filtrar todos os produtos com a mesma categoria do produto da tela-->
                 <span>Valor do produto com desconto: R${{$produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO}}</span><br><br><br>
+                @if(!Auth::check())
+
+                    <label for="">Adicionar quantidade</label>
+                    <input type="number" name="ITEM_QTD">
+                    <a href="/login">
+                        <button type="submit" id="botaocard">Adicionar ao carrinho</button>
+                    </a>
+
+
+                @else
                 <form method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
                 @csrf
                     <label for="">Adicionar quantidade</label>
                     <input type="number" name="ITEM_QTD">
-    
+
                     <button type="submit" id="botaocard">Adicionar ao carrinho</button>
                 </form>
-
+                @endif
 
 
             </div>

@@ -62,7 +62,7 @@
                         </div>
                     </div>
                 </div>
-            @endforeach    
+            @endforeach
 
                 <!-- Segundo Card mais vendidos -->
                 <section class="produtos02">
@@ -104,7 +104,7 @@
                      </section>
 
                      <!-- Terceiro Card -->
-                    
+
                      <section class="produtos">
                         <span class="title-secundary">Outros Produtos</span>
                         <hr>
