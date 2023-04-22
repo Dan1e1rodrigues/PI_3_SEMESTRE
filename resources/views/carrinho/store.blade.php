@@ -46,7 +46,7 @@
                         </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                           @if($item->ITEM_QTD==1)
-                          <h6 class="mb-0">{{$item->Produto->PRODUTO_PRECO}}</h6>
+                          <h6 class="mb-0">R${{$item->Produto->PRODUTO_PRECO}}</h6>
                         </div>
                           @else
                           <h6 class="mb-0">{{$item->Produto->PRODUTO_PRECO * $item-> ITEM_QTD}}</h6>
@@ -67,7 +67,16 @@
 
                       <div class="d-flex justify-content-between mb-4">
                         <h5 class="text-uppercase">Desconto: </h5>
-                        <h5>R${{$carrinho[0]->Produto->PRODUTO_DESCONTO}}</h5>
+                        <?php
+                            $desconto = 0;
+                        ?>
+                        <div id="invisivel">
+                        @foreach($carrinho as $item)
+                        {{ $desconto+= $item->Produto->PRODUTO_DESCONTO}}
+
+                        @endforeach
+                        </div>
+                        <h5>R${{$desconto}}</h5>
                       </div>
 
 
@@ -76,9 +85,20 @@
 
                       <div class="d-flex justify-content-between mb-5">
                         <h5 class="text-uppercase">Total: </h5>
-                        <h5>R${{$carrinho[0]->Produto->PRODUTO_PRECO-$carrinho[0]->Produto->PRODUTO_DESCONTO}}</h5>
+                        <?php
+                            $preco= 0;
+                        ?>
+                        <div id="invisivel">
+                        @foreach($carrinho as $item)
+                        {{$preco+=$item->Produto->PRODUTO_PRECO-$item->Produto->PRODUTO_DESCONTO}}
+                        @endforeach
+                        </div>
+                        <h5>R${{$preco}}</h5>
                       </div>
 
+                      <div class="d-flex justify-content-between mb-4">
+                      <a href="/"> <h5>Voltar às compras</h5></a>
+                      </div>
                       <button type="button" class="btn btn-dark btn-block btn-lg"
                         data-mdb-ripple-color="dark">Finalizar</button>
 
