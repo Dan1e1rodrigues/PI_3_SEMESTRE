@@ -39,11 +39,11 @@
             <!--Lista para classificar itens contidos dentro do menu-->
             <!--Pode ser editavel-->
             <ul class="navbar">
-                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/" class="active">home</a></li>
                 <li><a href="#">Mais vendidos</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Promoções</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">contato</a></li>
+                <li><a href="#">promoções</a></li>
             </ul>
             @if(!Auth::check())
             <div class="main">
@@ -54,10 +54,13 @@
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
-                <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
+                <a href="/login" class="user"><i class="ri-user-fill"></i>LOGIN</a>
 
-                <a href="/register" class="bxmenu">Criar conta</a>
+                <a href="/register" class="bxmenu">CADASTRO</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
+
+                <!-- Colocar link do carrinho -->
+                <a href="" class="cardev"><i class="ri-shopping-cart-line"></i></a>
             </div>
             @else
             <div class="main">

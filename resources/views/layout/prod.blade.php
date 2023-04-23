@@ -60,6 +60,7 @@
 
                 <a href="/register" class="bxmenu">Criar conta</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
+                
             </div>
             @else
              <!--Lista para classificar itens contidos dentro do menu-->
