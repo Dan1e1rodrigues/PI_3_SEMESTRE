@@ -1,14 +1,13 @@
 <head>
     <link rel="stylesheet" href="/css/login.css">
     <title>Delta</title>
-    <link rel="shortcut icon" type="image/jpg" href="/css/public/img/logoOficial.png">
 </head>
 
 <body>
 <!-- Estatus da sessão -->
 <x-guest-layout>
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
