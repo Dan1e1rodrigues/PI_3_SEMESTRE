@@ -63,23 +63,26 @@
                         </div>
                     </div>
                 </div>
-            @endforeach    
+            @endforeach
 
                 <!-- Segundo Card mais vendidos -->
                 <section class="produtos02">
                     <span class="title-secundary">Mais Vendidos</span>
                     <hr>
                     <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                            <div class="card">
-                                <img src="./IMG/vitrine01.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <!-- <h5 class="card-title">Camiseta Esportiva</h5>
-                                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae ea sed nesciunt officiis, ut similique natus pariatur dolore iste id harum voluptas doloribus. Totam inventore, aut modi reiciendis doloribus sequi.</p>
-                                    <button type="submit">Comprar</button> -->
-                                </div>
-                            </div>
+            @foreach(\App\Models\Produto::all()->take(3) as $produto)
+
+                <div class="col">
+                    <div class="card">
+                        <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
+                            <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
+                            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" id="botaocard">Comprar</button></a>
                         </div>
+                    </div>
+                </div>
+            @endforeach
                         <div class="col">
                             <div class="card">
                                 <img src="./IMG/vitrine02.png" class="card-img-top" alt="...">
@@ -105,7 +108,7 @@
                      </section>
 
                      <!-- Terceiro Card -->
-                    
+
                      <section class="produtos">
                         <span class="title-secundary">Outros Produtos</span>
                         <hr>
