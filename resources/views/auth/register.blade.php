@@ -8,29 +8,26 @@
         <h1>Cadastro</h1>
         <!--Campo input para colocar login/nome-->
         <br><br>
-        <x-input-label for="nome" :value="__('Nome')" />
+        <label for="nome">Nome</label>
         <input type="text" placeholder="Digite seu nome" id="name" name="name"  required  >
         <br><br>
         <!--Campo input para colocar senha-->
-        <x-input-label for="nome" :value="__('Email')" />
+        <label for="nome">Email</label>
         <input type="email" id="email" name="email" placeholder="Digite seu email">
         <br><br>
-        <div>
-        <x-input-label for="senha" :value="__('Senha')" />
+        <!-- Campo para colocar senha -->
+        <label for="senha">Senha</label>
         <input type="password" name="password"  placeholder="Senha" >
-        <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-        <br>
-
-        <x-input-label for="Confirme sua senha" :value="__('Confirme sua senha')" />
+        <br><br>
+        <!-- Esse campo não existe -->
+        <!-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> -->
+        <br><br>
+        <label for="Confirme sua senha">Confirme sua senha</label>
         <input type="password" placeholder="Confirme sua senha"  name="password_confirmation"  />
-        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-
         <br><br>
 
         <x-input-label for="CPF" :value="__('CPF')" />
-
-            <x-text-input id="cpf" class="block mt-1 w-full"
+        <x-text-input id="cpf" class="block mt-1 w-full"
                 type="text" maxlength="11"
                 name="cpf" />
 
