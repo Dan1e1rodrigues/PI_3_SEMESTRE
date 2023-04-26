@@ -34,7 +34,7 @@
         <!-- Barra de navegação -->
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
-            <img  src="/img/logoOficial.png" width="13%"class="logo">
+            <img  src="/img/logoOficial.png" width="10%"class="logo">
                 <!-- Favcon -->
                 <!-- <i class="ri-home-heart-fill"></i> -->
                 <!-- Tex0to -->
@@ -90,8 +90,8 @@
           <!--Floater-->
   <div id="floater">
                 <h2>Delta</h2>
-                <input type="text" placeholder="seu nome">
-                <input type="email" placeholder="seu email">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
                 <button id="email">Enviar</button>
                 <br><br>
 
@@ -101,7 +101,7 @@
                   <li>joao@gmail.com</li>
                 </ul>
 
-                <img  src="./LOGO/imagedelta.png" width="10%">
+                <img  src="/img/logoOficial.png" width="10%">
               </div>
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
