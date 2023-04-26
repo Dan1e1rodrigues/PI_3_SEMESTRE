@@ -31,4 +31,16 @@
         </div>
         <br>
         <p id="texto">Você já tem uma conta? <a href="/login">Fazer login</a></p>
+<<<<<<< Updated upstream
 <!-- </x-guest-layout> -->
+=======
+    </div>
+
+
+
+
+
+
+
+</x-guest-layout>
+>>>>>>> Stashed changes
