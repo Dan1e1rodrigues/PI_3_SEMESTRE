@@ -7,31 +7,27 @@
     <div class="telalogin">
         <h1>Cadastro</h1>
         <!--Campo input para colocar login/nome-->
-        <br><br>
-        <label for="nome">Nome</label>
-        <input type="text" placeholder="Digite seu nome" id="name" name="name"  required  >
-        <br><br>
+        
+        <p><label for="nome">Nome</label></p>
+        <p><input type="text" placeholder="Digite seu nome" id="name" name="name" required></p>
+        
         <!--Campo input para colocar senha-->
-        <label for="nome">Email</label>
-        <input type="email" id="email" name="email" placeholder="Digite seu email">
-        <br><br>
+        <p><label for="nome">Email</label></p>
+        <p><input type="email" id="email" name="email" placeholder="Digite seu email"></p>
+
         <!-- Campo para colocar senha -->
-        <label for="senha">Senha</label>
-        <input type="password" name="password"  placeholder="Senha" >
-        <br><br>
+        <p><label for="senha">Senha</label></p>
+        <p><input type="password" name="password" placeholder="Senha"></p>
+        
         <!-- Esse campo não existe -->
         <!-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> -->
-        <br><br>
-        <label for="Confirme sua senha">Confirme sua senha</label>
-        <input type="password" placeholder="Confirme sua senha"  name="password_confirmation"  />
-        <br><br>
 
-        <x-input-label for="CPF" :value="__('CPF')" />
-        <x-text-input id="cpf" class="block mt-1 w-full"
-                type="text" maxlength="11"
-                name="cpf" />
+        <p><label for="Confirme sua senha">Confirme</label></p>
+        <p><input type="password" placeholder="Confirme sua senha" name="password_confirmation"/></p>
 
-       <br><br>
+        <p><label for="CPF">CPF</label></p>
+        <p><input id="cpf" class="block mt-1 w-full" type="text" maxlength="11" name="cpf"/><p>
+
             <x-primary-button class="ml-4">
                 {{ __('Cadastrar') }}
             </x-primary-button>
