@@ -1,6 +1,6 @@
 <body>
 <!-- Estatus da sessão -->
-<x-guest-layout>
+
     <!-- Session Status -->
     <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
 
@@ -9,30 +9,30 @@
 
         <!-- Input de email -->
         <!-- Email Address -->
-        <div class="telalo">
+        <div class="telaemail">
             <label for="email">Email</label>
+            <p></p>
             <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             
+
         <!-- Input de senha -->
         <!-- Password -->
-    
+            <p></p>
             <label for="password">Senha</label>
-
+            <p></p>
             <input id="password" class="block mt-1 w-full"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
 
-        </div>
-
+            <p></p>
         <!-- TEXTo lembrar senha -->
         <!-- Remember Me -->
-        <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-200" name="remember">
                 <span class="ml-2 text-sm text-gray-600">{{ __('Lembre-me') }}</span>
             </label>
-        </div>
+        
 
         <div class="flex items-center justify-end mt-4">
             @if (Route::has('password.request'))
@@ -46,5 +46,5 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+
 </body>
