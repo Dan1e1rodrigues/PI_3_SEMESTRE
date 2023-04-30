@@ -1,8 +1,3 @@
-<head>
-    <link rel="stylesheet" href="/css/login.css">
-    <title>Delta</title>
-</head>
-
 <body>
 <!-- Estatus da sessão -->
 <x-guest-layout>
@@ -14,23 +9,20 @@
 
         <!-- Input de email -->
         <!-- Email Address -->
-        <div class="telaemail">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
+        <div class="telalo">
+            <label for="email">Email</label>
+            <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            
         <!-- Input de senha -->
         <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Senha')" />
+    
+            <label for="password">Senha</label>
 
-            <x-text-input id="password" class="block mt-1 w-full"
+            <input id="password" class="block mt-1 w-full"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <!-- TEXTo lembrar senha -->
