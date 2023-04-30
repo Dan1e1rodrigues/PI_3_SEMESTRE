@@ -65,7 +65,7 @@ li{
 }
 
 .navbar-brand{
-    color:#8c84fc;
+    color:#5850ce;
     padding: 1%;
 }
 
@@ -97,9 +97,9 @@ text-transform: uppercase;
 /* Cores do navbar editar para o padrão do PI & E-commerce*/
 /* Confirmar o esquema de cores, montar o padrão*/
 :root{
-    --bg-color:#fff; 
-    --text-color: #1C8394;
-    --main-color: #A52502;
+    --bg-color:#ffffff; 
+    --text-color: #1091a8;
+    --main-color: #1e0bf1b5;
 }
 
 body{
