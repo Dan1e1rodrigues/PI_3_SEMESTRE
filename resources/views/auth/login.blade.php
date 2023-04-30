@@ -1,6 +1,6 @@
 <body>
 <!-- Estatus da sessão -->
-
+<x-guest-layout>
     <!-- Session Status -->
     <!-- <x-auth-session-status class="mb-4" :status="session('status')" /> -->
 
@@ -9,23 +9,23 @@
 
         <!-- Input de email -->
         <!-- Email Address -->
-        <div class="telaemail">
+        <div class="telalogin">
             <label for="email">Email</label>
-            <p></p>
             <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
             
 
         <!-- Input de senha -->
         <!-- Password -->
-            <p></p>
+    
             <label for="password">Senha</label>
-            <p></p>
+
             <input id="password" class="block mt-1 w-full"
                             type="password"
                             name="password"
                             required autocomplete="current-password" />
 
-            <p></p>
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        
         <!-- TEXTo lembrar senha -->
         <!-- Remember Me -->
             <label for="remember_me" class="inline-flex items-center">
@@ -39,12 +39,13 @@
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
                     {{ __('Esqueceu sua senha?') }}
                 </a>
+        
             @endif
 
-            <x-primary-button class="ml-3">
+            <button class="ml-3">
                 {{ __('Login') }}
-            </x-primary-button>
+            </button>
         </div>
     </form>
-
+</x-guest-layout>
 </body>

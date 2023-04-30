@@ -3,13 +3,13 @@ body{
     background-image: linear-gradient(55deg,rgb(59, 59, 177),black);
 }
 
-div{
+.telalogin{
     background-color: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 8%;
+    padding: 80px;
     border-radius: 15%;
     color:white;
 }
@@ -51,9 +51,6 @@ button:hover{
     background-color: green;
 }
 
-.telalo{
-    background-color: blue;
-}
 
 .telaemail{
     background-color: blue;
