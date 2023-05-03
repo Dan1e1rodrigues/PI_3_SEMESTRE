@@ -7,7 +7,11 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <!-- LOGIN -->
         <link rel="stylesheet" type="text/css" href="/css/login.css" media="screen"/>
+
+        <!-- CADASTRO -->
+        <link rel="stylesheet" type="text/css" href="/css/cadastro.css" media="screen"/>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

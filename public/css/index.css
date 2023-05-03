@@ -18,13 +18,13 @@
 .carousel-caption {
     position: static;
     width: 100%;
-    background-color: #1C8394;
+    background-color: rgb(218, 209, 209);
 }
 
 .center-content {
     text-align: center;
-    background-color: #1C8394;
-    padding: 3%;
+    background-color: rgb(218, 209, 209);
+    padding: 2%;
 }
 
 .botao{
@@ -55,8 +55,8 @@
     background-color: #1C8394;
     color:#fff;
     text-align: center;
-    margin: 1%;
-    padding: 1%;
+    margin: 2%;
+    padding: 2%;
 }
 
 /*Essa faz com que a lista seja removida*/
@@ -98,8 +98,8 @@ text-transform: uppercase;
 /* Confirmar o esquema de cores, montar o padrão*/
 :root{
     --bg-color:#ffffff; 
-    --text-color: #20b3cd;
-    --main-color: #1e0bf1b5;
+    --text-color: #ffb52c;
+    --main-color: #1804f3e3;
 }
 
 body{

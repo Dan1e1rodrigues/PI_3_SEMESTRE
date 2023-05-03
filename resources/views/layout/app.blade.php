@@ -30,10 +30,7 @@
         <!-- Barra de navegação -->
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
-            <img  src="/img/logoOficial.png" width="13%"class="logo">
-                <!-- Favcon -->
-                <!-- <i class="ri-home-heart-fill"></i> -->
-                <!-- Tex0to -->
+            <img  src="/img/logoOficial.png" width="10%"class="logo">
 
             </a>
 
@@ -57,7 +54,7 @@
 
                 <a href="/login" class="user"><i class="ri-user-fill"></i>LOGIN</a>
 
-                <a href="/register" class="bxmenu">CADASTRO</a>
+                <a href="/register" class="user"><i class="ri-user-add-line"></i>CADASTRO</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
 
                 <!-- Colocar link do carrinho -->
