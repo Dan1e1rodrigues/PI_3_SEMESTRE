@@ -6,7 +6,7 @@
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-<div class="funfa">>
+<div class="funfa">
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />

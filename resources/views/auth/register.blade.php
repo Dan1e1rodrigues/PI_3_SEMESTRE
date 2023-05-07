@@ -6,10 +6,10 @@
     <div class="telalogin">
         <h1>Cadastro</h1>
         <!--Campo input para colocar login/nome-->
-        
+
         <p><label for="nome">Nome</label></p>
-        <p><input type="text" placeholder="Digite seu nome" id="name" name="name" required></p>    
-    
+        <p><input type="text" placeholder="Digite seu nome" id="name" name="name" required></p>
+
         <!--Campo input para colocar senha-->
         <p><label for="nome">Email</label></p>
         <p><input type="email" id="email" name="email" placeholder="Digite seu email"></p>
@@ -17,7 +17,7 @@
         <!-- Campo para colocar senha -->
         <p><label for="senha">Senha</label></p>
         <p><input type="password" name="password" placeholder="Senha"></p>
-        
+
         <!-- Esse campo não existe -->
         <!-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> -->
 
@@ -31,9 +31,7 @@
         </div>
         <br>
         <p id="texto">Você já tem uma conta? <a href="/login">Fazer login</a></p>
-<<<<<<< Updated upstream
-<!-- </x-guest-layout> -->
-=======
+
     </div>
 
 
@@ -43,4 +41,4 @@
 
 
 </x-guest-layout>
->>>>>>> Stashed changes
+
