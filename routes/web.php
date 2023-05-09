@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CarrinhoController;
+use App\Http\Controllers\PedidoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,10 @@ Route::get('/', function () {
 Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
 
+
+Route::post('/pedido',[PedidoController::class,'checkout'])->name('pedido.checkout');;
+Route::get('/pedido',[PedidoController::class,'index'])->name('pedido.index');;
+Route::get('/pedido/{pedido}',[PedidoController::class,'show'])->name('pedido.show');;
 
 Route::get('/dashboard', function () {
     return redirect('/');

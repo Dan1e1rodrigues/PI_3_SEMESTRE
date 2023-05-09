@@ -15,14 +15,11 @@
                   <div class="col-lg-8">
                     <div class="p-5">
                       <div class="d-flex justify-content-between align-items-center mb-5">
-                        <h1 class="fw-bold mb-0 text-black">Carrinho</h1>
+                        <h1 class="fw-bold mb-0 text-black">Pedidos</h1>
                         <h6 class="mb-0 text-muted"><!--aqui vai a contagem dos itens--> </h6>
                       </div>
                       <hr class="my-4">
                     @foreach($carrinho as $item)
-
-                @csrf
-
                       <div class="row mb-4 d-flex justify-content-between align-items-center">
                         <div class="col-md-2 col-lg-2 col-xl-2">
                           <img
@@ -65,7 +62,7 @@
 
                   <div class="col-lg-4 bg-grey">
                     <div class="p-5">
-                      <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                      <h3 class="fw-bold mb-5 mt-2 pt-1">Total</h3>
                       <hr class="my-4">
 
                       <div class="d-flex justify-content-between mb-4">
@@ -102,9 +99,9 @@
                       <div class="d-flex justify-content-between mb-4">
                       <a href="/"> <h5>Voltar às compras</h5></a>
                       </div>
-                      <a href="{{route('pedido.index')}}"><button type="submit" class="btn btn-dark btn-block btn-lg"
-                        data-mdb-ripple-color="dark">Finalizar</button></a>
-</form>
+                      <button type="button" class="btn btn-dark btn-block btn-lg"
+                        data-mdb-ripple-color="dark">Finalizar</button>
+
                     </div>
                   </div>
                 </div>
