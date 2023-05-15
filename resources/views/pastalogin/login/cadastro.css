@@ -9,16 +9,18 @@ body{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    padding: 80px;
+    padding: 90px;
     border-radius: 15px;
     color:white;
 }
+
 .inputLogin{
     padding: 15px;
     border:none;
     outline: none;
     font-size: 15px;
 }
+
 .buttonLogin{
     background-color: aqua;
     border: none;
@@ -28,6 +30,7 @@ body{
     color:white;
     font-size: 15px;    
 }
+
 button:hover{
     background-color: deepskyblue;
     cursor: pointer;
