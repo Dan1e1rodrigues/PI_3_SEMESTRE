@@ -23,4 +23,9 @@ class Pedido extends Model
         $status = $this->hasOne(PedidoStatus::class, 'STATUS_ID', 'STATUS_ID');
         return $status;
     }
+
+    public function peditoItem(){
+        $statusItem= $this->hasOne(PedidoItem::class, 'PEDIDO_ID', 'PEDIDO_ID');
+        return $statusItem;
+    }
 }

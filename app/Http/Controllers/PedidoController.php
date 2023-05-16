@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Pedido;
 use Illuminate\Http\Request;
+use illuminate\Support\Facades\Auth;
+
 
 class PedidoController extends Controller
 {
     public function index(){
 
         $pedidos = Pedido::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get();
-        console.log($pedidos);
+        //console.log($pedidos);
 
       return view('pedido.index')->with('pedidos',$pedidos);
     }
@@ -31,4 +33,23 @@ class PedidoController extends Controller
          return view ('pedido.show', ['pedido' =>$pedido,'pedidos' => $pedidos]);
 
        }
+
+      
+      
+       public function store(Carrinho $carrinho, Request $request){
+        $item = Pedido::where('USUARIO_ID', Auth::user()->USUARIO_ID)
+                ->where('PRODUTO_ID', $carrinho->PRODUTO_ID)->first();
+
+     
+            $item =PedidoItem::create([
+                'USUARIO_ID' => Auth::user()->USUARIO_ID,
+                'PRODUTO_ID' => $item->$carrinho->PRODUTO_ID,
+                'ITEM_QTD' => $item->ITEM_QTD,
+                'ITEM_PRECO'=>$item->$carrinho->PRODUTO_PRECO
+            ]);
+        
+
+
+        return redirect(route('pedido.index'));
+      }
 }

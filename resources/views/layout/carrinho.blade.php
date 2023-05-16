@@ -25,6 +25,8 @@
     <link rel="shortcut icon" href="./LOGO/logo-favicon.png" type="image/x-icon">
 
     <title>Delta</title>
+    <main>@yield('main')</main>
+
 </head>
 </html>
 <!-- Removendo NavBar da pagina de cadastro -->
