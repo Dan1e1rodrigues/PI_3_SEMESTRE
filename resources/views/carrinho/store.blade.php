@@ -102,8 +102,10 @@
                       <div class="d-flex justify-content-between mb-4">
                       <a href="/"> <h5>Voltar às compras</h5></a>
                       </div>
-                      <a href="{{route('pedido.index')}}"><button type="submit" class="btn btn-dark btn-block btn-lg"
-                        data-mdb-ripple-color="dark">Finalizar</button></a>
+                      <form action="{{route('pedido.checkout')}}"  method="POST">
+                      @csrf  
+                      <button type="submit" class="btn btn-dark btn-block btn-lg"
+                        data-mdb-ripple-color="dark">Finalizar</button></form>
 </form>
                     </div>
                   </div>

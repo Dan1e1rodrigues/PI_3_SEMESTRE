@@ -1,5 +1,9 @@
+
+
 @extends('layout.carrinho')
 @section('main')
 
-{{dd($pedidos)}}
+{{$pedido}}
+
+<h1>{{$pedido->PEDIDO_ID}}</h1>
 @endsection

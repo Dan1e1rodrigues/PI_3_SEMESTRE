@@ -12,7 +12,7 @@ class PeditoItem extends Model
 
     protected $fillable = [
         'PRODUTO_ID',
-        'USUARIO_ID',
+        'PEDIDO_ID',
         'ITEM_QTD',
         'ITEM_PRECO'
     ];
