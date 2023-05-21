@@ -1,23 +1,16 @@
 
-<!--
-<!DOCTYPE html>
-<html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{$produto->PRODUTO_NOME}}</title>
-</head>
-<body>
 
-    <h1>{{$produto->PRODUTO_NOME}}</h1>
-    <span>{{$produto->PRODUTO_PRECO}} - {{$produto->PRODUTO_DESCONTO}}</span>
-</body>
-</html>
--->
 @extends('layout.prod')
 @section('main')
-
+<script>
+        function login() {
+            window.alert('Você deve estar logado para acessar o carrinho!');
+        }
+        // function aviso(){
+        //     alert('Você deve inserir a quantidade que deseja!');
+        //     document.location.reload(true);
+        // }
+</script>
     <main>
         <div class="content">
             <div class="left-side">
@@ -41,7 +34,7 @@
                     <label for="">Adicionar quantidade</label>
                     <input type="number" name="ITEM_QTD">
                     <a href="/login">
-                        <button type="submit" id="botaocard">Adicionar ao carrinho</button>
+                        <button type="submit" id="botaocard" onclick="login()">Adicionar ao carrinho</button>
                     </a>
 
 
@@ -51,7 +44,7 @@
                     <label for="">Adicionar quantidade</label>
                     <input type="number" name="ITEM_QTD">
 
-                    <button type="submit" id="botaocard">Adicionar ao carrinho</button>
+                    <button type="submit" id="botaocard" onclick="aviso()">Adicionar ao carrinho</button>
                 </form>
                 @endif
 

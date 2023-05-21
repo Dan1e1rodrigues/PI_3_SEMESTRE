@@ -22,7 +22,7 @@
                     @foreach($carrinho as $item)
 
                 @csrf
-
+                @if($item->ITEM_QTD>0)
                       <div class="row mb-4 d-flex justify-content-between align-items-center">
                         <div class="col-md-2 col-lg-2 col-xl-2">
                           <img
@@ -58,9 +58,8 @@
                           <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
                         </div>
                       </div>
-
-
                       <hr class="my-4">
+                    @endif
                   @endforeach
 
                   <div class="col-lg-4 bg-grey">
@@ -103,10 +102,10 @@
                       <a href="/"> <h5>Voltar às compras</h5></a>
                       </div>
                       <form action="{{route('pedido.checkout')}}"  method="POST">
-                      @csrf  
+                      @csrf
                       <button type="submit" class="btn btn-dark btn-block btn-lg"
                         data-mdb-ripple-color="dark">Finalizar</button></form>
-</form>
+                </form>
                     </div>
                   </div>
                 </div>

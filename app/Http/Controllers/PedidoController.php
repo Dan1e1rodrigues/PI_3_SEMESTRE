@@ -39,9 +39,9 @@ class PedidoController extends Controller
 
               $item->update([
                 'ITEM_QTD'=>0
-                
+
               ]);
-          
+
                }
 
 
@@ -54,6 +54,6 @@ class PedidoController extends Controller
 
        }
 
-      
-    
+
+
 }
