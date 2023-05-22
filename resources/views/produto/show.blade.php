@@ -32,7 +32,7 @@
                 @if(!Auth::check())
 
                     <label for="">Adicionar quantidade</label>
-                    <input type="number" name="ITEM_QTD">
+                    <input type="number" name="ITEM_QTD" min="1" value="1">
                     <a href="/login">
                         <button type="submit" id="botaocard" onclick="login()">Adicionar ao carrinho</button>
                     </a>
@@ -42,7 +42,7 @@
                 <form method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
                 @csrf
                     <label for="">Adicionar quantidade</label>
-                    <input type="number" name="ITEM_QTD">
+                    <input type="number" name="ITEM_QTD" min="1" value="1">
 
                     <button type="submit" id="botaocard" onclick="aviso()">Adicionar ao carrinho</button>
                 </form>
