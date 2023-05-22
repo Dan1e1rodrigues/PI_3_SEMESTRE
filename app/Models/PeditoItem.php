@@ -12,7 +12,7 @@ class PeditoItem extends Model
 
     protected $fillable = [
         'PRODUTO_ID',
-        'USUARIO_ID',
+        'PEDIDO_ID',
         'ITEM_QTD',
         'ITEM_PRECO'
     ];
@@ -31,8 +31,10 @@ class PeditoItem extends Model
 
         return $query;
     }
-
-    
+    public function peditoItem(){
+        $statusItem= $this->hasMany(PedidoItem::class, 'PEDIDO_ID', 'PEDIDO_ID');
+        return $statusItem;
+    }
 
 
 }
