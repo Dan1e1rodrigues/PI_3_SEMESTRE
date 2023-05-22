@@ -1,23 +1,16 @@
 
-<!--
-<!DOCTYPE html>
-<html lang="PT-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{$produto->PRODUTO_NOME}}</title>
-</head>
-<body>
 
-    <h1>{{$produto->PRODUTO_NOME}}</h1>
-    <span>{{$produto->PRODUTO_PRECO}} - {{$produto->PRODUTO_DESCONTO}}</span>
-</body>
-</html>
--->
 @extends('layout.prod')
 @section('main')
-
+<script>
+        function login() {
+            window.alert('Você deve estar logado para acessar o carrinho!');
+        }
+        // function aviso(){
+        //     alert('Você deve inserir a quantidade que deseja!');
+        //     document.location.reload(true);
+        // }
+</script>
     <main>
         <div class="content">
             <div class="left-side">
@@ -36,14 +29,24 @@
 
                 <!--ira filtrar todos os produtos com a mesma categoria do produto da tela-->
                 <span>Valor do produto com desconto: R${{$produto->PRODUTO_PRECO - $produto->PRODUTO_DESCONTO}}</span><br><br><br>
+                @if(!Auth::check())
+
+                    <label for="">Adicionar quantidade</label>
+                    <input type="number" name="ITEM_QTD" min="1" value="1">
+                    <a href="/login">
+                        <button type="submit" id="botaocard" onclick="login()">Adicionar ao carrinho</button>
+                    </a>
+
+
+                @else
                 <form method="POST" action="{{route('carrinho.store', $produto->PRODUTO_ID)}}">
                 @csrf
                     <label for="">Adicionar quantidade</label>
-                    <input type="number" name="ITEM_QTD">
-    
-                    <button type="submit" id="botaocard">Adicionar ao carrinho</button>
-                </form>
+                    <input type="number" name="ITEM_QTD" min="1" value="1">
 
+                    <button type="submit" id="botaocard" onclick="aviso()">Adicionar ao carrinho</button>
+                </form>
+                @endif
 
 
             </div>

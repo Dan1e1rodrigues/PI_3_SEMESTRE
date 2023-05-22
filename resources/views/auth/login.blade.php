@@ -1,10 +1,12 @@
+<link rel="stylesheet" href="http://127.0.0.1:8000/css/login.css">
+
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
-
+<div class="funfa">
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
@@ -48,4 +50,5 @@
             </x-primary-button>
         </div>
     </form>
+</div>
 </x-guest-layout>
