@@ -31,8 +31,10 @@ class PeditoItem extends Model
 
         return $query;
     }
-
-    
+    public function peditoItem(){
+        $statusItem= $this->hasMany(PedidoItem::class, 'PEDIDO_ID', 'PEDIDO_ID');
+        return $statusItem;
+    }
 
 
 }

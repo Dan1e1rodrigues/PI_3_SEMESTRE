@@ -25,7 +25,7 @@ class Pedido extends Model
     }
 
     public function peditoItem(){
-        $statusItem= $this->hasOne(PedidoItem::class, 'PEDIDO_ID', 'PEDIDO_ID');
+        $statusItem= $this->hasMany(PedidoItem::class, 'PEDIDO_ID', 'PEDIDO_ID');
         return $statusItem;
     }
 }

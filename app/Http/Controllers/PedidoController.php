@@ -27,7 +27,7 @@ class PedidoController extends Controller
 
         ]);
 
-        $itens = Carrinho::where('USUARIO_ID', Auth::user()->USUARIO_ID)
+        $itens = Carrinho::where([['USUARIO_ID','=', Auth::user()->USUARIO_ID], ['ITEM_QTD', '>', 0]])
                ->get();
                foreach($itens as $item){
                 PeditoItem::create([
@@ -49,11 +49,10 @@ class PedidoController extends Controller
     }
     public function show(Pedido $pedido){
 
-         $pedidos = Pedido::find($pedido->PEDIDO_ID)->Pedidos;
-         return view ('pedido.show', ['pedido' =>$pedido,'pedidos' => $pedidos]);
+        $carrinho = PeditoItem::where([['PEDIDO_ID','=', $pedido->PEDIDO_ID]])->get();
+         return view ('pedido.show', ['pedido' =>$pedido,'carrinho'=>$carrinho]);
 
        }
-
 
 
 }

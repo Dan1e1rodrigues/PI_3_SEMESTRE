@@ -4,8 +4,6 @@
 @extends('layout.carrinho')
 @section('main')
 
-{{$pedido}}
-
 
 
 <section class="h-100 h-custom" style="background-color: #d2c9ff;">
@@ -18,19 +16,20 @@
                   <div class="col-lg-8">
                     <div class="p-5">
                       <div class="d-flex justify-content-between align-items-center mb-5">
-                        <h1 class="fw-bold mb-0 text-black">Pedidos</h1>
+                        <h1 class="fw-bold mb-0 text-black">Pedidos:</h1>
                         <h6 class="mb-0 text-muted">Data da compra:{{$pedido->PEDIDO_DATA}}</h6>
                       </div>
                       <hr class="my-4">
-
+                    @foreach($carrinho as $item)
 
                       <div class="row mb-4 d-flex justify-content-between align-items-center">
                         <div class="col-md-2 col-lg-2 col-xl-2">
-                          <!--  -->
+                          <img
+                            src="{{$item->Produto->ProdutoImagem[0]->IMAGEM_URL}}"
+                            class="img-fluid rounded-3" alt="Cotton T-shirt">
                         </div>
                         <div class="col-md-3 col-lg-3 col-xl-3">
-                          <h6 class="text-muted"></h6>
-                          <h6 class="text-black mb-0"></h6>
+                          <h6 class="text-black mb-0">{{$item->Produto->PRODUTO_NOME}}</h6>
                         </div>
                         <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                           <button class="btn btn-link px-2"
@@ -38,7 +37,7 @@
                             <i class="fas fa-minus"></i>
                           </button>
 
-                          <input id="form1" min="1" name="quantity" value=""  type="number"
+                          <input id="form1" min="1" name="quantity" value="{{$item -> ITEM_QTD}}"  type="number"
                             class="form-control form-control-sm" />
 
                           <button class="btn btn-link px-2"
@@ -47,19 +46,19 @@
                           </button>
                         </div>
                         <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-
-                          <h6 class="mb-0">R$</h6>
+                          @if($item->ITEM_QTD==1)
+                          <h6 class="mb-0">R${{$item->Produto->PRODUTO_PRECO}}</h6>
                         </div>
-
-                          <h6 class="mb-0"></h6>
-
+                          @else
+                          <h6 class="mb-0">{{$item->Produto->PRODUTO_PRECO * $item-> ITEM_QTD}}</h6>
+                          @endif
                         <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                           <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
                         </div>
                       </div>
                       <hr class="my-4">
-
-
+                    
+                  @endforeach
 
                   <div class="col-lg-4 bg-grey">
                     <div class="p-5">
@@ -67,15 +66,29 @@
                       <hr class="my-4">
 
                       <div class="d-flex justify-content-between mb-4">
-                        <h5 class="text-uppercase">Desconto: </h5>
 
+                      <hr class="my-4">
 
+                      <div class="d-flex justify-content-between mb-5">
+                        <h5 class="text-uppercase">Total: </h5>
+                        <?php
+                            $preco= 0;
+                        ?>
+                        <div id="invisivel">
+                        @foreach($carrinho as $item)
+                        @if($item->ITEM_QTD>0)
+                          {{$preco+=$item->Produto->PRODUTO_PRECO-$item->Produto->PRODUTO_DESCONTO}}
+                        @endif
+                        @endforeach
+                        </div>
+                        <h5>R${{$preco}}</h5>
+                      </div>
 
                       <div class="d-flex justify-content-between mb-4">
                       <a href="/"> <button type="submit" class="btn btn-dark btn-block btn-lg"
-                        data-mdb-ripple-color="dark">Sair</button></a>
+                        data-mdb-ripple-color="dark">Sair</button>
+                      </a>
                       </div>
-
                     </div>
                   </div>
                 </div>

@@ -92,7 +92,9 @@
                         ?>
                         <div id="invisivel">
                         @foreach($carrinho as $item)
-                        {{$preco+=$item->Produto->PRODUTO_PRECO-$item->Produto->PRODUTO_DESCONTO}}
+                        @if($item->ITEM_QTD>0)
+                          {{$preco+=$item->Produto->PRODUTO_PRECO-$item->Produto->PRODUTO_DESCONTO}}
+                        @endif
                         @endforeach
                         </div>
                         <h5>R${{$preco}}</h5>
