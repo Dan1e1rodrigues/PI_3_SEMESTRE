@@ -37,8 +37,8 @@
                             <i class="fas fa-minus"></i>
                           </button>
 
-                          <input id="form1" min="1" name="quantity" value="{{$item -> ITEM_QTD}}"  type="number"
-                            class="form-control form-control-sm" />
+                          <input id="form1" name="quantity" value="{{$item -> ITEM_QTD}}"  type="number"
+                            class="form-control form-control-sm" disabled/>
 
                           <button class="btn btn-link px-2"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
@@ -68,16 +68,25 @@
                       <div class="d-flex justify-content-between mb-4">
 
                       <hr class="my-4">
+                      <?php
+                            $desconto = 0;
+                        ?>
+                        <div id="invisivel">
+                        @foreach($carrinho as $item)
+                        {{ $desconto+= $item->Produto->PRODUTO_DESCONTO * $item-> ITEM_QTD}}
 
+                        @endforeach
+                        </div>
                       <div class="d-flex justify-content-between mb-5">
                         <h5 class="text-uppercase">Total: </h5>
                         <?php
                             $preco= 0;
                         ?>
                         <div id="invisivel">
+                       
                         @foreach($carrinho as $item)
                         @if($item->ITEM_QTD>0)
-                          {{$preco+=$item->Produto->PRODUTO_PRECO-$item->Produto->PRODUTO_DESCONTO}}
+                          {{$preco+=($item->Produto->PRODUTO_PRECO*$item->ITEM_QTD)-$desconto}}
                         @endif
                         @endforeach
                         </div>

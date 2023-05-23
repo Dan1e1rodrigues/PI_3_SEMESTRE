@@ -5,17 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\EnderecoController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,10 +17,13 @@ Route::get('/', function () {
 Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
 
+Route::get('/endereco',[EnderecoController::class,'index'])->name('endereco.index');
+Route::get('/endereco/store',[EnderecoController::class,'store'])->name('endereco.store');
 
-Route::post('/pedido',[PedidoController::class,'checkout'])->name('pedido.checkout');;
-Route::get('/pedido',[PedidoController::class,'index'])->name('pedido.index');;
-Route::get('/pedido/{pedido}',[PedidoController::class,'show'])->name('pedido.show');;
+
+Route::post('/pedido',[PedidoController::class,'checkout'])->name('pedido.checkout');
+Route::get('/pedido',[PedidoController::class,'index'])->name('pedido.index');
+Route::get('/pedido/{pedido}',[PedidoController::class,'show'])->name('pedido.show');
 
 Route::get('/dashboard', function () {
     return redirect('/');
