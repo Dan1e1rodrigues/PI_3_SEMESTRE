@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\PedidoController;
-
+use App\Http\Controllers\CategoriaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +29,8 @@ Route::post('/pedido',[PedidoController::class,'checkout'])->name('pedido.checko
 Route::get('/pedido',[PedidoController::class,'index'])->name('pedido.index');;
 Route::get('/pedido/{pedido}',[PedidoController::class,'show'])->name('pedido.show');;
 
+
+
 Route::get('/dashboard', function () {
     return redirect('/');
 })->middleware(['auth', 'verified'])->name('dashboard');//só vai entrar quem estiver autenticado
@@ -48,10 +50,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/categoria/{categoria}',[CategoriaController::class,'show'])->name('categoria.show');
+
+
 Route::get('/produto',[ProdutoController::class,'index']);// controllee-class-funcão dentro da controller(site)
 Route::get('/produto/{produto}',[ProdutoController::class,'show'])->name('produto.show');//aqui , no servidor, será produto/1
 
-//Route::get('/produto/{produto}',[ProdutoController::class,'show']); ao criar uma rota, tambem criamos o caminho para ela ser chamada
-// se n é necessario a model, va direto para a view
-
-// se o arquivo está fora de uma pasta , é só colocar '/'

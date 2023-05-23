@@ -55,9 +55,8 @@
 
                 <div class="col">
                     <div class="card">
-                    <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="">
-
-
+                        <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
+                        <div class="card-body">
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
                             <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
                             <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" id="botaocard">Comprar</button></a>
