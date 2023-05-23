@@ -30,8 +30,8 @@
                             class="img-fluid rounded-3" alt="Cotton T-shirt">
                         </div>
                         <div class="col-md-3 col-lg-3 col-xl-3">
-                          <h6 class="text-muted">{{$item->Produto->PRODUTO_DESC}}</h6>
-                          <h6 class="text-black mb-0">{{$item->Produto->PRODUTO_NOME}}</h6>
+                          <h6 class="text-muted">{{$item->Produto->PRODUTO_NOME}}</h6>
+                          <h6 class="text-black mb-0">{{$item->Produto->PRODUTO_DESC}}</h6>
                         </div>
                         <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                           <button class="btn btn-link px-2"
@@ -74,7 +74,7 @@
                         ?>
                         <div id="invisivel">
                         @foreach($carrinho as $item)
-                        {{ $desconto+= $item->Produto->PRODUTO_DESCONTO}}
+                        {{ $desconto+= $item->Produto->PRODUTO_DESCONTO * $item-> ITEM_QTD}}
 
                         @endforeach
                         </div>
@@ -93,7 +93,7 @@
                         <div id="invisivel">
                         @foreach($carrinho as $item)
                         @if($item->ITEM_QTD>0)
-                          {{$preco+=$item->Produto->PRODUTO_PRECO-$item->Produto->PRODUTO_DESCONTO}}
+                          {{$preco+=($item->Produto->PRODUTO_PRECO*$item->ITEM_QTD)-$desconto}}
                         @endif
                         @endforeach
                         </div>
