@@ -23,7 +23,7 @@ class PedidoController extends Controller
         $pedido =Pedido::create([
             'USUARIO_ID' => Auth::user()->USUARIO_ID,
             'STATUS_ID' => 2,
-            'PEDIDO_DATA'=> date("Y/m/d")
+            'PEDIDO_DATA'=> date("Y/m/d") 
 
         ]);
 
