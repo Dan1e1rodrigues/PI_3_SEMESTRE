@@ -18,13 +18,13 @@
 .carousel-caption {
     position: static;
     width: 100%;
-    background-color: rgb(218, 209, 209);
+    background-color: #1C8394;
 }
 
 .center-content {
     text-align: center;
-    background-color: rgb(218, 209, 209);
-    padding: 2%;
+    background-color: #1C8394;
+    padding: 3%;
 }
 
 .botao{
@@ -36,7 +36,7 @@
     margin-top: 10px;
     /*Alinhamento do texto...*/
     text-align: center;
-    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir 
+    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir
     coloca o padding que ele vai ajudar*/
     padding: 10%;
 }
@@ -46,17 +46,17 @@
     margin-top: 10px;
     /*Alinhamento do texto...*/
     text-align: center;
-    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir 
+    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir
     coloca o padding que ele vai ajudar*/
-    padding: 4%;
+    padding: 5%;
 }
 
 #floater{
     background-color: #1C8394;
     color:#fff;
     text-align: center;
-    margin: 2%;
-    padding: 2%;
+    margin: 1%;
+    padding: 1%;
 }
 
 /*Essa faz com que a lista seja removida*/
@@ -65,7 +65,7 @@ li{
 }
 
 .navbar-brand{
-    color:#5850ce;
+    color:#8c84fc;
     padding: 1%;
 }
 
@@ -97,9 +97,9 @@ text-transform: uppercase;
 /* Cores do navbar editar para o padrão do PI & E-commerce*/
 /* Confirmar o esquema de cores, montar o padrão*/
 :root{
-    --bg-color:#ffffff; 
-    --text-color: #ffb52c;
-    --main-color: #1804f3e3;
+    --bg-color:#fff;
+    --text-color: #1C8394;
+    --main-color: #A52502;
 }
 
 body{
@@ -153,12 +153,12 @@ header{
     list-style: none;
 }
 
-/* Caso ocorra a necessidade de alterar o tamanho da letra altere por margin, pois caso ela fique com 
+/* Caso ocorra a necessidade de alterar o tamanho da letra altere por margin, pois caso ela fique com
 o tamanho muito grande irá quebrar a página */
 .navbar a{
     color: var(--text-color);
     font-size: 1.1rem;
-    font-weight: 200;
+    font-weight: 500;
     padding: 5px 0;
     margin: 0px 15px;
     transition: all .50s ease;
@@ -190,14 +190,12 @@ o tamanho muito grande irá quebrar a página */
 .user{
     display: flex;
     align-items: center;
-    text-decoration: none;
 }
 
 .user i{
     color: var(--main-color);
-    font-size: 20px;
+    font-size: 28px;
     margin-right: 7px;
-    text-decoration: none;
 }
 
 .main a:hover{
@@ -210,17 +208,6 @@ o tamanho muito grande irá quebrar a página */
     cursor: pointer;
     z-index: 10001;
     display: none;
-}
-
-.bxmenu{
-    text-decoration: none;
-}
-
-.cardev{
-    color: var(--main-color);
-    font-size: 10px;
-    margin-right: 5px;
-    text-decoration: none;
 }
 
     /* Codigo responsivo */
@@ -268,7 +255,7 @@ o tamanho muito grande irá quebrar a página */
     .navbar a.active{
         color: var(--text-color);
     }
-    
+
     .navbar.open{
         right: 2%;
     }
@@ -280,6 +267,9 @@ o tamanho muito grande irá quebrar a página */
     text-align: center;
 }
 
+#invisivel{
+    display:none;
+}
 
 
 

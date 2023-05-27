@@ -1,57 +1,44 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
-        @csrf
+<!-- <x-guest-layout> -->
+@extends('layout.app')
+<form method="POST" action="{{ route('register') }}">
+    @csrf
 
-        <!-- Name -->
-        <div class="telalogin">
-            <p><label for="name">Nome</label></p>
-            
-            <p><input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name"></input></p>
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+    <div class="telalogin">
+        <h1>Cadastro</h1>
+        <!--Campo input para colocar login/nome-->
 
-            <br>
-        <!-- Email Address -->
-            <p><label for="email" :value="__('Email')">Email</label></p>
-            
-            <p><input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" /></p>
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        <p><label for="nome">Nome</label></p>
+        <p><input type="text" placeholder="Digite seu nome" id="name" name="name" required></p>
 
-            <br>
-        <!-- Password -->
-            <p><label for="password" :value="__('Password')">Senha</label></p>
-            
-            <p><input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password"></input></p>
+        <!--Campo input para colocar senha-->
+        <p><label for="nome">Email</label></p>
+        <p><input type="email" id="email" name="email" placeholder="Digite seu email"></p>
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        <!-- Campo para colocar senha -->
+        <p><label for="senha">Senha</label></p>
+        <p><input type="password" name="password" placeholder="Senha"></p>
 
-            <br>
-        <!-- Confirm Password -->
-            <p><label for="password_confirmation" :value="__('Confirm Password')">Confirmar</label></p>
-            
-            <p><input id="password_confirmation" class="block mt-1 w-full"
-                            type="password"
-                            name="password_confirmation" required autocomplete="new-password"></input></p>
+        <!-- Esse campo não existe -->
+        <!-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> -->
 
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        <p><label for="Confirme sua senha">Confirme</label></p>
+        <p><input type="password" placeholder="Confirme sua senha" name="password_confirmation"/></p>
 
-            <br>
+        <p><label for="CPF">CPF</label></p>
+        <p><input id="cpf" class="block mt-1 w-full" type="text" maxlength="11" name="cpf"/><p>
 
-            <p class="registro"><a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Já registrado?') }}
-            </a></p>
-
-            <br>
-
-            <p>
-                <button class="ml-3">
-                {{ __('Registrar') }}
-                </button>
-            </p>
-
+        <button class="ml-4">{{ __('Cadastrar') }}</button>
         </div>
+        <br>
+        <p id="texto">Você já tem uma conta? <a href="/login">Fazer login</a></p>
 
-    </form>
+    </div>
+
+
+
+
+
+
+
 </x-guest-layout>
+
