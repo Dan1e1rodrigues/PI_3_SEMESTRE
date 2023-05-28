@@ -35,10 +35,6 @@
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
             <img  src="/img/logoOficial.png" width="10%"class="logo">
-                <!-- Favcon -->
-                <!-- <i class="ri-home-heart-fill"></i> -->
-                <!-- Tex0to -->
-
             </a>
 
             <!--Lista para classificar itens contidos dentro do menu-->
@@ -61,8 +57,8 @@
 
                 <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
 
-                <a href="/register" class="bxmenu">Criar conta</a>
-                <div class="bx bx-menu" id="menu-icon"></div>
+                <a href="/register" class="user"><i class="ri-user-add-line"></i>Criar conta</a>
+                <!-- <div class="bx bx-menu" id="menu-icon"></div> -->
             </div>
             @else
             
@@ -75,7 +71,7 @@
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
-                <span class="user"><i class="ri-user-fill"></i>Olá, {{Auth::user()->USUARIO_NOME}}</span>
+                <span class="user"><i class="ri-user-fill"></i>Ola, {{Auth::user()->USUARIO_NOME}}</span>
 
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
@@ -86,7 +82,9 @@
             @endif
         </header>
         <!-- FIM NAVBAR -->
+
         <main>@yield('main')</main>
+
           <!--Floater-->
   <div id="floater">
                 <h2>Delta</h2>
@@ -104,6 +102,9 @@
                 <img  src="/img/logoOficial.png" width="10%">
               </div>
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+
+     </script>
+
     </body>
 </html>

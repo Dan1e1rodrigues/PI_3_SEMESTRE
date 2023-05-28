@@ -51,6 +51,7 @@
     padding: 5%;
 }
 
+/* F */
 #floater{
     background-color: #1C8394;
     color:#fff;
@@ -190,11 +191,12 @@ o tamanho muito grande irá quebrar a página */
 .user{
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .user i{
     color: var(--main-color);
-    font-size: 28px;
+    font-size: 25px;
     margin-right: 7px;
 }
 
@@ -271,6 +273,24 @@ o tamanho muito grande irá quebrar a página */
     display:none;
 }
 
+/* CARD BOTÂO */
+.buttonLogin{
+    background-color: aqua;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color:white;
+    font-size: 15px;    
+    margin-top:5%;
+}
+
+button:hover{
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+/* FIM */
 
 
 
