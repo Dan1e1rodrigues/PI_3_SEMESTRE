@@ -34,7 +34,7 @@
         <!-- Barra de navegação -->
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
-            <img  src="/img/logoOficial.png" width="10%"class="logo">
+            <img  src="/img/logoOficialOficial.png" width="10%"class="logo">
             </a>
 
             <!--Lista para classificar itens contidos dentro do menu-->
