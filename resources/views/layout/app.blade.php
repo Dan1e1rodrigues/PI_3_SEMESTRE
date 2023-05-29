@@ -60,17 +60,16 @@
   </ul>
 </div>
 
-                </li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
+                <!-- <li><a href="#">Blog</a></li>
+                <li><a href="#">Contato</a></li> -->
                 <li><a href="#">Promoções</a></li>
             </ul>
             @if(!Auth::check())
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search"  aria-label="Search">
+                <form action="produto" class="d-flex" role="search" method="GET">
+                    <input class="form-control me-2" type="text" id="search" name="search"  aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
@@ -81,8 +80,8 @@
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
             @else
-            
-            
+
+
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->

@@ -10,9 +10,19 @@ use App\Models\Categoria;
 class ProdutoController extends Controller
 {
     public function index(){
-        $produtos = Produto::all();//retorna todos os produtos e guarda nessa variavel
 
-      return view('produto.index')->with('produtos',$produtos);//retorna a view numa pasta(n pode ser no plural, pois é o q está na model) e o arquivo("".blade.php)
+        $search= request('search');//do formulario
+        if($search){
+            $produtos=Produto::where([
+                ['PRODUTO_NOME','like','%'.$search.'%']
+            ])->get();
+        }else{
+            $produtos = Produto::all();//retorna todos os produtos e guarda nessa variavel
+        }
+
+
+
+      return view('produto.index',['produtos'=>$produtos,'search'=>$search]);//retorna a view numa pasta(n pode ser no plural, pois é o q está na model) e o arquivo("".blade.php)
     }
 
     public function show(Produto $produto){ // model e variavel
