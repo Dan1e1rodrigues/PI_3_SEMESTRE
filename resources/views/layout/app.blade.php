@@ -111,12 +111,12 @@
                     
                     <li>
                         <!-- <span class="article-date">PIX</span> -->
-                        <img class="cardreey" src="/img/cardpix.png">
+                        <img class="cardreey" src="/img/cardvisa.png">
                     </li>
 
                     <li>
                         <!-- <span class="article-date">PIX</span> -->
-                        <img class="cardreey" src="/img/cardpix.png">
+                        <img class="cardreey" src="/img/boleto.jpg">
                     </li>
                 </ul>
             </div>
