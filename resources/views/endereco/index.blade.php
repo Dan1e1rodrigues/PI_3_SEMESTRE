@@ -5,12 +5,12 @@
     <section>
         <table>
             <ol>
-                <li>          
-                    <form action="{{route('endereco.store')}}"  method="POST">
-                      @csrf
+                <li>
+                    <a href="{{route('endereco.store')}}">
+
                       <button type="submit" class="btn btn-dark btn-block btn-lg"
                         data-mdb-ripple-color="dark">Inserir novo endereço</button>
-                    </form>
+                    </a>
                 </li>
             </ol>
         </table>
