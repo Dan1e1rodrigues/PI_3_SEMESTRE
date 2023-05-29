@@ -12,14 +12,14 @@
 
         <!-- Email Address -->
         <div>
-            <label for="email">Email<label>
+            <label for="email">Email <label>
             <input class="inputLogin" type="email" name="email" :value="old('email')" required autofocus autocomplete="username">
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
         <div>
-            <label for="password" :value="__('Password')">Senha</label>
+            <label for="password" :value="__('Password')">Senha </label>
             <input id="password" class="inputLogin"
                             type="password"
                             name="password"

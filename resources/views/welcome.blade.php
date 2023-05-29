@@ -79,7 +79,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
                             <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
-                            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" class="buttonLogin">Comprar</button></a>
+                            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" class="buttonLogin">Comprar <i class="ri-shopping-cart-line"></i></button></a>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
 
                      <!-- Terceiro Card -->
 
-                     <section class="produtos">
+                     <!-- <section class="produtos">
                         <span class="title-secundary">Outros Produtos</span>
                         <hr>
                         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -145,5 +145,5 @@
                                 </div>
                             </div>
                             </div>
-                            </section>
+                            </section> -->
 @endsection

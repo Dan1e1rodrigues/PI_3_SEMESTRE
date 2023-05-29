@@ -7,25 +7,35 @@
         <h1>Cadastro</h1>
         <!--Campo input para colocar login/nome-->
 
-        <p><label for="nome">Nome</label></p>
-        <p><input type="text" placeholder="Digite seu nome" id="name" name="name" required></p>
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" placeholder="Digite seu nome" id="name" name="name" required>
+        </div>
 
+        <div>
         <!--Campo input para colocar senha-->
-        <p><label for="nome">Email</label></p>
-        <p><input type="email" id="email" name="email" placeholder="Digite seu email"></p>
+            <label for="nome">Email</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email">
+        </div>
 
+        <div>
         <!-- Campo para colocar senha -->
-        <p><label for="senha">Senha</label></p>
-        <p><input type="password" name="password" placeholder="Senha"></p>
+            <label for="senha">Senha</label>
+            <input type="password" name="password" placeholder="Senha">
+        </div>
 
         <!-- Esse campo não existe -->
         <!-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> -->
 
-        <p><label for="Confirme sua senha">Confirme</label></p>
-        <p><input type="password" placeholder="Confirme sua senha" name="password_confirmation"/></p>
+        <div>
+            <label for="Confirme sua senha">Confirme</label>
+            <input type="password" placeholder="Confirme sua senha" name="password_confirmation"/>
+        </div>
 
-        <p><label for="CPF">CPF</label></p>
-        <p><input id="cpf" class="block mt-1 w-full" type="text" maxlength="11" name="cpf"/><p>
+        <div>
+            <label for="CPF">CPF</label>
+            <input id="cpf" class="block mt-1 w-full" type="text" maxlength="11" name="cpf"/>
+        </div>
 
         <button class="ml-4">{{ __('Cadastrar') }}</button>
         </div>
