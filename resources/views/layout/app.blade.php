@@ -56,9 +56,9 @@
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
-                <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
+                <a href="/login" class="user"><i class="ri-user-fill"></i>Login</a>
 
-                <a href="/register" class="user"><i class="ri-user-add-line"></i>Criar conta</a>
+                <a href="/register" class="user"><i class="ri-user-add-line"></i>Cadastro</a>
                 <!-- <div class="bx bx-menu" id="menu-icon"></div> -->
             </div>
             @else
