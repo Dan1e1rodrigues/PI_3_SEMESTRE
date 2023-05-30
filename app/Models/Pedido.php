@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\PeditoItem;
 
 class Pedido extends Model
 {
@@ -25,7 +26,7 @@ class Pedido extends Model
     }
 
     public function peditoItem(){
-        $statusItem= $this->hasMany(PedidoItem::class, 'PEDIDO_ID', 'PEDIDO_ID');
+        $statusItem= $this->hasMany(PeditoItem::class, 'PEDIDO_ID', 'PEDIDO_ID');
         return $statusItem;
     }
 }

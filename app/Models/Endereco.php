@@ -10,7 +10,11 @@ class Endereco extends Model
     use HasFactory;
     protected $table ='ENDERECO';  //fazer com que ele reconheça a tabela do banco e trocar o nome da tabela
     protected $primaryKey ='ENDERECO_ID';
+
+    public $timestamps = false;
+
     protected $fillable = [
+        'USUARIO_ID',
         'ENDERECO_NOME',
         'ENDERECO_LOGRADOURO',
         'ENDERECO_NUMERO',

@@ -14,6 +14,8 @@ class PedidoController extends Controller
     public function index(){
 
         $pedidos = Pedido::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get();
+      
+        
         //console.log($pedidos);
 
       return view('pedido.index')->with('pedidos',$pedidos);

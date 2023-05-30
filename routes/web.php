@@ -28,8 +28,8 @@ Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('ca
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
 
 Route::get('/endereco',[EnderecoController::class,'index'])->name('endereco.index');
-Route::get('/endereco/store',[EnderecoController::class,'store'])->name('endereco.store');
-Route::get("/endereco/create", [EnderecoController::class, "create"]);
+Route::post('/endereco/store',[EnderecoController::class,'store'])->name('endereco.store');
+Route::get("/endereco/create", [EnderecoController::class, "create"])->name('endereco.create');
 
 Route::post('/pedido',[PedidoController::class,'checkout'])->name('pedido.checkout');
 Route::get('/pedido',[PedidoController::class,'index'])->name('pedido.index');
