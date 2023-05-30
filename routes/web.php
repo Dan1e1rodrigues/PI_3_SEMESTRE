@@ -16,6 +16,7 @@ use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\EnderecoController;
+use App\Http\Controllers\CategoriaController;
 
 
 
