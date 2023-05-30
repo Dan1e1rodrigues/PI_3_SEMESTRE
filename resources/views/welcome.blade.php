@@ -51,7 +51,7 @@
             <span class="title-secundary">Produtos em Destaque</span>
             <hr>
             <div class="row row-cols-1 row-cols-md-4 g-4">
-            @foreach(\App\Models\Produto::all()->take(4     ) as $produto)
+            @foreach(\App\Models\Produto::all()->take(4) as $produto)
 
                 <div class="col">
                     <div class="card">
