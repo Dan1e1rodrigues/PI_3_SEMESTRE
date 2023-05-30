@@ -66,7 +66,6 @@
             </div>
             @else
             
-            
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
@@ -76,13 +75,15 @@
                   </form>
 
                 <span class="user"><i class="ri-user-fill"></i>Olá, {{Auth::user()->USUARIO_NOME}}</span>
-
+                <a href="endereco">Editar</a>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
                 </form>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
+            <a href="pedido"><span class="user"><i class="ri-user-fill"></i>Meus pedidos</span></a>
+                
             @endif
         </header>
         <!-- FIM NAVBAR -->
