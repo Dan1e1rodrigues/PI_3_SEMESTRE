@@ -26,7 +26,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="d-block center-content">
-                            <img src="{{('/img/bannercrs3.png')}}" alt="..." height="500">
+                            <img src="{{('/img/bnnlocalizacao.png')}}" alt="..." height="500">
                         </div>
                         <div class="carousel-caption d-none d-md-block">
                             <!-- <h5 style="color: black;">Camisetas de corrida.</h5>
@@ -51,7 +51,7 @@
             <span class="title-secundary">Produtos em Destaque</span>
             <hr>
             <div class="row row-cols-1 row-cols-md-4 g-4">
-            @foreach(\App\Models\Produto::all()->take(5) as $produto)
+            @foreach(\App\Models\Produto::all()->take(4) as $produto)
 
                 <div class="col">
                     <div class="card">
@@ -59,7 +59,8 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
                             <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
-                            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" id="botaocard">Comprar</button></a>
+                            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}">
+                            <button type="submit" class="buttonLogin">Comprar <i class="ri-shopping-cart-line"></i></button></a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +79,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
                             <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
-                            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" id="botaocard">Comprar</button></a>
+                            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" class="buttonLogin">Comprar <i class="ri-shopping-cart-line"></i></button></a>
                         </div>
                     </div>
                 </div>
@@ -109,7 +110,7 @@
 
                      <!-- Terceiro Card -->
 
-                     <section class="produtos">
+                     <!-- <section class="produtos">
                         <span class="title-secundary">Outros Produtos</span>
                         <hr>
                         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -144,5 +145,5 @@
                                 </div>
                             </div>
                             </div>
-                            </section>
+                            </section> -->
 @endsection

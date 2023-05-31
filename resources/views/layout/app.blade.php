@@ -46,26 +46,40 @@
             <ul class="navbar">
                 <li><a href="/" class="active">Home</a></li>
                 <li><a href="#">Mais vendidos</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
+                <li>
+                <div class="dropdown">
+  <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Categorias
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  @foreach(\App\Models\Categoria::all() as $categoria)
+    <li>
+ <a class="dropdown-item" href="{{route('categoria.show', $categoria->CATEGORIA_ID)}}"> {{$categoria->CATEGORIA_NOME}}</a>
+    </li>
+    @endforeach
+  </ul>
+</div>
+
+                <!-- <li><a href="#">Blog</a></li>
+                <li><a href="#">Contato</a></li> -->
                 <li><a href="#">Promoções</a></li>
             </ul>
             @if(!Auth::check())
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search"  aria-label="Search">
+                <form action="produto" class="d-flex" role="search" method="GET">
+                    <input class="form-control me-2" type="text" id="search" name="search"  aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
                 <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
 
+
                 <a href="/register" class="bxmenu">Criar conta</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
             @else
-            
             
             <div class="main">
 
@@ -76,13 +90,15 @@
                   </form>
 
                 <span class="user"><i class="ri-user-fill"></i>Olá, {{Auth::user()->USUARIO_NOME}}</span>
-
+                <a href="endereco">Editar</a>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
                 </form>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
+            <a href="pedido"><span class="user"><i class="ri-user-fill"></i>Meus pedidos</span></a>
+                
             @endif
         </header>
         <!-- FIM NAVBAR -->

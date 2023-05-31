@@ -1,46 +1,63 @@
-<!-- <x-guest-layout> -->
-@extends('layout.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://127.0.0.1:8000/css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+
+<div>
+
+
 <form method="POST" action="{{ route('register') }}">
+
     @csrf
 
-    <div class="telalogin">
+    <div class="login">
+        
         <h1>Cadastro</h1>
         <!--Campo input para colocar login/nome-->
-        
-        <p><label for="nome">Nome</label></p>
-        <p><input type="text" placeholder="Digite seu nome" id="name" name="name" required></p>    
-    
-        <!--Campo input para colocar senha-->
-        <p><label for="nome">Email</label></p>
-        <p><input type="email" id="email" name="email" placeholder="Digite seu email"></p>
 
+        <div>
+            <label for="nome">Nome</label>
+            <input class="inputLogin" type="text" placeholder="Digite seu nome" id="name" name="name" required>
+        </div>
+
+        <div>
+        <!--Campo input para colocar senha-->
+            <label for="nome">Email</label>
+            <input class="inputLogin" type="email" id="email" name="email" placeholder="Digite seu email">
+        </div>
+
+        <div>
         <!-- Campo para colocar senha -->
-        <p><label for="senha">Senha</label></p>
-        <p><input type="password" name="password" placeholder="Senha"></p>
-        
+            <label for="senha">Senha</label>
+            <input class="inputLogin" type="password" name="password" placeholder="Senha">
+        </div>
+
         <!-- Esse campo não existe -->
         <!-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> -->
 
-        <p><label for="Confirme sua senha">Confirme</label></p>
-        <p><input type="password" placeholder="Confirme sua senha" name="password_confirmation"/></p>
-
-        <p><label for="CPF">CPF</label></p>
-        <p><input id="cpf" class="block mt-1 w-full" type="text" maxlength="11" name="cpf"/><p>
-
-        <button class="ml-4">{{ __('Cadastrar') }}</button>
+        <div>
+            <label for="Confirme sua senha">Confirme</label>
+            <input class="inputLogin" type="password" placeholder="Confirme sua senha" name="password_confirmation"/>
         </div>
-        <br>
+
+        <div>
+            <label for="CPF">CPF</label>
+            <input class="inputLogin" id="cpf" class="block mt-1 w-full" type="text" maxlength="11" name="cpf"/>
+        </div>
+
+        <button class="buttonLogin">{{ __('Cadastrar') }}</button>
+
         <p id="texto">Você já tem uma conta? <a href="/login">Fazer login</a></p>
-<<<<<<< Updated upstream
-<!-- </x-guest-layout> -->
-=======
+        </div>
+        
+
     </div>
 
+</div>
 
-
-
-
-
-
-</x-guest-layout>
->>>>>>> Stashed changes
+</body>
+</html>

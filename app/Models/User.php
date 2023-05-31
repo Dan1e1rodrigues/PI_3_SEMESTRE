@@ -17,7 +17,9 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+
     protected $fillable = [
+
         'USUARIO_NOME',
         'USUARIO_EMAIL',
         'USUARIO_SENHA',
@@ -29,11 +31,18 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $hidden = [
+
+    protected $hidden = [ // NUNCA VAI MOSTRAR A SENHA EM TELA
         'USUARIO_SENHA'
     ];
 
-    protected $table = "USUARIO";
-    protected $primaryKey = "USUARIO_ID";
-    public $timestamps = false;
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+        protected $table = "USUARIO";
+        protected $primaryKey="USUARIO_ID";
+        public $timestamps =  false;
+
 }

@@ -8,7 +8,7 @@
     <!-- Link CSS -->
     <!-- Alterando o CSS, vou mudar o caminho desse css para o carrinho-->
     <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen"/>
-
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen"/>
 
     <!-- Link Favicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -25,6 +25,8 @@
     <link rel="shortcut icon" href="./LOGO/logo-favicon.png" type="image/x-icon">
 
     <title>Delta</title>
+    <main>@yield('main')</main>
+
 </head>
 </html>
 <!-- Removendo NavBar da pagina de cadastro -->
