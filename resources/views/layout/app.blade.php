@@ -101,24 +101,81 @@
                 
             @endif
         </header>
-        <!-- FIM NAVBAR -->
+
         <main>@yield('main')</main>
-          <!--Floater-->
-  <div id="floater">
-                <h2>Delta</h2>
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <button id="email">Enviar</button>
-                <br><br>
 
-                <h2>Contato</h2>
-                <ul>
-                  <li>rodriguesdeaguiardaniel@gmail.com</li>
-                  <li>joao@gmail.com</li>
+            <!--Footer-->
+            <footer>
+
+        <div class="wrapper">
+            <div class="footer-box">
+             <div class="company-footer">
+
+                <img class="logo-yyt-log" src="/img/logoOficialOficial.png">
+                <h3>Delta</h3>
+                <p>A loja de esportes mais amada do Brasil</p>
+
+            </div>
+        </div>
+
+        <div class="footer-box">
+            <div class="articles-footer">
+
+                <h3>Formas de pagamento</h3>
+                <ul class="footer-list footer-article-list">
+                    <li>
+                        <!-- <span class="article-date">PIX</span> -->
+                        <img class="cardreey" src="/img/cardpix.png">
+                    </li>
+                    
+                    <li>
+                        <!-- <span class="article-date">PIX</span> -->
+                        <img class="cardreey" src="/img/cardvisa.png">
+                    </li>
+
+                    <li>
+                        <!-- <span class="article-date">PIX</span> -->
+                        <img class="cardreey" src="/img/boleto.jpg">
+                    </li>
                 </ul>
+            </div>
+        </div>
 
-                <img  src="/img/logoOficial.png" width="10%">
-              </div>
+            <div class="footer-box">
+                <h3>Redes Sociais</h3>
+                <ul class="footer-list">
+                    <li>
+                        <a href="#">
+                            <!-- Icon facebook -->
+                            <i class="ri-facebook-box-fill"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- Icon Instagram -->
+                            <i class="ri-instagram-line"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <!-- Icon youtube -->
+                            <i class="ri-youtube-fill"></i>
+                            <span>Youtube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="wrapper">
+            <p>@Delta - 2023</p>
+        </div>
+    </div>
+    </footer>
+<!-- FIM FOOTER -->
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
