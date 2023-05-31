@@ -68,7 +68,7 @@
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
-                <form action="produto" class="d-flex" role="search" method="GET">
+                <form action="../produto" class="d-flex" role="search" method="GET">
                     <input class="form-control me-2" type="text" id="search" name="search"  aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
@@ -80,25 +80,35 @@
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
             @else
-            
+
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search"  aria-label="Search">
+                <form action="../produto" class="d-flex" role="search" method="GET">
+                    <input class="form-control me-2" type="text" id="search" name="search"  aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
-                <span class="user"><i class="ri-user-fill"></i>Olá, {{Auth::user()->USUARIO_NOME}}</span>
-                <a href="endereco">Editar</a>
+                  <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Olá, {{Auth::user()->USUARIO_NOME}}
+                </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li>
+ <a class="dropdown-item"  href="endereco">Meus Endereços</a>
+    </li>
+    <li>
+ <a class="dropdown-item"  href="pedido">Meus Pedidos</a>
+    </li>
+
+
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <button onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
                 </form>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
-            <a href="pedido"><span class="user"><i class="ri-user-fill"></i>Meus pedidos</span></a>
-                
+</ul>
+
             @endif
         </header>
         <!-- FIM NAVBAR -->
