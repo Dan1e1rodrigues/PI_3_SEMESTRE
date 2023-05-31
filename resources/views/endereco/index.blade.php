@@ -4,20 +4,10 @@
 
     <section>
 
-    @foreach($enderecos as $endereco)
-    <div>{{$endereco->ENDERECO_NOME}}</div>
-    <div>{{$endereco->ENDERECO_LOGRADOURO}}</div>
-    <div>{{$endereco->ENDERECO_NUMERO}}</div>
-    <div>{{$endereco->ENDERECO_COMPLEMENTO}}</div>
-    <div>{{$endereco->ENDERECO_CEP}}</div>
-    <div>{{$endereco->ENDERECO_CIDADE}}</div>
-    <div>{{$endereco->ENDERECO_ESTADO}}</div>
-    @endforeach
-        <table>
         <div class="tabela-ty">
     <table class="table">
         <thead class="table-secondary">
-            <tr>    
+            <tr>
 
                 <th scope="col">Nome</th>
                 <th scope="col">LOGRADOURO</th>
