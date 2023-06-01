@@ -71,7 +71,7 @@
                     <span class="title-secundary">Mais Vendidos</span>
                     <hr>
                     <div class="row row-cols-1 row-cols-md-3 g-4">
-            @foreach(\App\Models\Produto::all()->take(3) as $produto)
+            @foreach(\App\Models\Produto::all()->take(5) as $produto)
 
                 <div class="col">
                     <div class="card">

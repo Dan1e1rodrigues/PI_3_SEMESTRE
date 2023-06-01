@@ -13,6 +13,9 @@
     <!-- Link CSS -->
     <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen"/>
 
+    <!-- Icone na barra de navegação -->
+    <link rel="icon" type="image/png" href="/img/logoOficialOficial.png"/>
+
     <!-- Link Favicon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
@@ -34,7 +37,7 @@
         <!-- Barra de navegação -->
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
-            <img  src="/img/logoOficial.png" width="10%"class="logo">
+            <img  src="/img/logoOficialOficial.png" width="10%"class="logo">
                 <!-- Favcon -->
                 <!-- <i class="ri-home-heart-fill"></i> -->
                 <!-- Tex0to -->
@@ -48,17 +51,17 @@
                 <li><a href="#">Mais vendidos</a></li>
                 <li>
                 <div class="dropdown">
-  <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Categorias
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-  @foreach(\App\Models\Categoria::all() as $categoria)
-    <li>
- <a class="dropdown-item" href="{{route('categoria.show', $categoria->CATEGORIA_ID)}}"> {{$categoria->CATEGORIA_NOME}}</a>
-    </li>
-    @endforeach
-  </ul>
-</div>
+            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            @foreach(\App\Models\Categoria::all() as $categoria)
+                <li>
+            <a class="dropdown-item" href="{{route('categoria.show', $categoria->CATEGORIA_ID)}}"> {{$categoria->CATEGORIA_NOME}}</a>
+                </li>
+                @endforeach
+            </ul>
+            </div>
 
                 <!-- <li><a href="#">Blog</a></li>
                 <li><a href="#">Contato</a></li> -->
@@ -73,10 +76,10 @@
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
-                <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
+                <a href="/login" class="user"><i class="ri-user-fill"></i>Login </a>
 
 
-                <a href="/register" class="bxmenu">Criar conta</a>
+                <a href="/register" class="user"><i class="ri-user-add-fill"></i>Cadastro</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
             @else
@@ -92,22 +95,24 @@
                   <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   Olá, {{Auth::user()->USUARIO_NOME}}
                 </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li>
- <a class="dropdown-item"  href="endereco">Meus Endereços</a>
-    </li>
-    <li>
- <a class="dropdown-item"  href="pedido">Meus Pedidos</a>
-    </li>
-
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                    <a class="dropdown-item"  href="endereco">Meus Endereços</a>
+                        </li>
+                        <li>
+                    <a class="dropdown-item"  href="pedido">Meus Pedidos</a>
+                        </li>
 
                 <form method="POST" action="{{ route('logout') }}">
+
                     @csrf
-                    <button onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
+
+                    <button class="buttonsair" onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
                 </form>
+
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
-</ul>
+            </ul>
 
             @endif
         </header>
@@ -137,16 +142,15 @@
                         <!-- <span class="article-date">PIX</span> -->
                         <img class="cardreey" src="/img/cardpix.png">
                     </li>
-                    
                     <li>
                         <!-- <span class="article-date">PIX</span> -->
                         <img class="cardreey" src="/img/cardvisa.png">
                     </li>
-
                     <li>
                         <!-- <span class="article-date">PIX</span> -->
                         <img class="cardreey" src="/img/boleto.jpg">
                     </li>
+
                 </ul>
             </div>
         </div>
