@@ -29,88 +29,161 @@
     <body>
 
         <!-- Barra de navegação -->
-        <header>
+        <header style="margin-bottom: 60px;">
             <!-- Possibilidade de colocar um favcon aqui -->
-            <img  src="/img/logoOficial.png" width="10%"class="logo">
+            <img  src="/img/logoOficialOficial.png" width="10%"class="logo">
                 <!-- Favcon -->
                 <!-- <i class="ri-home-heart-fill"></i> -->
                 <!-- Tex0to -->
 
             </a>
-            @if(!Auth::check())
+
             <!--Lista para classificar itens contidos dentro do menu-->
             <!--Pode ser editavel-->
             <ul class="navbar">
                 <li><a href="/" class="active">Home</a></li>
                 <li><a href="#">Mais vendidos</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
+                <li>
+                <div class="dropdown">
+            <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            @foreach(\App\Models\Categoria::all() as $categoria)
+                <li>
+            <a class="dropdown-item" href="{{route('categoria.show', $categoria->CATEGORIA_ID)}}"> {{$categoria->CATEGORIA_NOME}}</a>
+                </li>
+                @endforeach
+            </ul>
+            </div>
+
+                <!-- <li><a href="#">Blog</a></li>
+                <li><a href="#">Contato</a></li> -->
                 <li><a href="#">Promoções</a></li>
             </ul>
-
-
+            @if(!Auth::check())
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search"  aria-label="Search">
+                <form action="../produto" class="d-flex" role="search" method="GET">
+                    <input class="form-control me-2" type="text" id="search" name="search"  aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
-                <a href="/login" class="user"><i class="ri-user-fill"></i>Fazer Login</a>
+                <a href="/login" class="user"><i class="ri-user-fill"></i>Login </a>
 
-                <a href="/register" class="bxmenu">Criar conta</a>
+
+                <a href="/register" class="user"><i class="ri-user-add-fill"></i>Cadastro</a>
                 <div class="bx bx-menu" id="menu-icon"></div>
-                
             </div>
             @else
-             <!--Lista para classificar itens contidos dentro do menu-->
-            <!--Pode ser editavel-->
-            <ul class="navbar">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="#">Mais vendidos</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Promoções</a></li>
-                <li><a href="#">Carrinho</a></li>
-            </ul>
+
             <div class="main">
 
                 <!-- Arrumar botão transparente de pesquisa -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search"  aria-label="Search">
+                <form action="../produto" class="d-flex" role="search" method="GET">
+                    <input class="form-control me-2" type="text" id="search" name="search"  aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><i class="ri-search-line"></i></button>
                   </form>
 
-                <span class="user"><i class="ri-user-fill"></i>Olá, {{Auth::user()->USUARIO_NOME}}</span>
+                  <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Olá, {{Auth::user()->USUARIO_NOME}}
+                </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                    <a class="dropdown-item"  href="endereco">Meus Endereços</a>
+                        </li>
+                        <li>
+                    <a class="dropdown-item"  href="pedido">Meus Pedidos</a>
+                        </li>
 
-                <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Sair') }}
-                            </x-dropdown-link>
+                <form method="POST" action="{{ route('logout') }}">
+
+                    @csrf
+
+                    <button class="buttonsair" onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
+                </form>
+
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
+            </ul>
+
             @endif
         </header>
+
         <!-- FIM NAVBAR -->
         <main>@yield('main')</main>
           <!--Floater-->
-  <div id="floater">
-                <h2>Delta</h2>
-                <input type="text" placeholder="seu nome">
-                <input type="email" placeholder="seu email">
-                <button id="email">Enviar</button>
-                <br><br>
+          <footer>
 
-                <h2>Contato</h2>
-                <ul>
-                  <li>rodriguesdeaguiardaniel@gmail.com</li>
-                  <li>joao@gmail.com</li>
-                </ul>
+            <div class="wrapper">
+                <div class="footer-box">
+                <div class="company-footer">
 
-                <img  src="./LOGO/imagedelta.png" width="10%">
-              </div>
+                    <img class="logo-yyt-log" src="/img/logoOficialOficial.png">
+                    <h3>Delta</h3>
+                    <p>A loja de esportes mais amada do Brasil</p>
+
+                </div>
+            </div>
+
+            <div class="footer-box">
+                <div class="articles-footer">
+
+                    <h3>Formas de pagamento</h3>
+                    <ul class="footer-list footer-article-list">
+                        <li>
+                            <!-- <span class="article-date">PIX</span> -->
+                            <img class="cardreey" src="/img/cardpix.png">
+                        </li>
+                        <li>
+                            <!-- <span class="article-date">PIX</span> -->
+                            <img class="cardreey" src="/img/cardvisa.png">
+                        </li>
+                        <li>
+                            <!-- <span class="article-date">PIX</span> -->
+                            <img class="cardreey" src="/img/boleto.jpg">
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+                <div class="footer-box">
+                    <h3>Redes Sociais</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="#">
+                                <!-- Icon facebook -->
+                                <i class="ri-facebook-box-fill"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- Icon Instagram -->
+                                <i class="ri-instagram-line"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <!-- Icon youtube -->
+                                <i class="ri-youtube-fill"></i>
+                                <span>Youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            <div class="footer-bottom">
+            <div class="wrapper">
+                <p>@Delta - 2023</p>
+            </div>
+            </div>
+            </footer>
+            <!-- FIM FOOTER -->
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
