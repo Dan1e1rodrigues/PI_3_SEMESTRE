@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Produto;
 use App\Models\Carrinho;
+use App\Models\Endereco;
 use illuminate\Support\Facades\Auth;
 
 class CarrinhoController extends Controller
@@ -25,7 +26,7 @@ class CarrinhoController extends Controller
             ]);
         }
 
-
+        $enderecos = Endereco::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get();
         return redirect(route('carrinho.index'));
     }
 

@@ -33,7 +33,7 @@
                             <p style="color: black;">Camisetas de corrida.</p> -->
                         </div>
                     </div>
-                    
+
                 </div>
 
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
