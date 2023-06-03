@@ -30,7 +30,7 @@
                 <td>{{$endereco->ENDERECO_ESTADO}}</td>
 
             </tr>
-            @endforeach
+        @endforeach
         </table>
             <ol>
                 <li>
