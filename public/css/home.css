@@ -152,6 +152,7 @@ header{
     display: flex;
     /* remove os pontos da lista não ordenada */
     list-style: none;
+    margin-top: 15px;
 }
 
 /* Caso ocorra a necessidade de alterar o tamanho da letra altere por margin, pois caso ela fique com 
@@ -271,6 +272,7 @@ o tamanho muito grande irá quebrar a página */
 .telalo{
     background-color: blue;
 }
+
 
 
 

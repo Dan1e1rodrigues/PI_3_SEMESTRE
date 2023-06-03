@@ -5,7 +5,7 @@
 
 
 
-<section class="h-100 h-custom" style="background-color: #d2c9ff;">
+<section class="h-100 h-custom" style="background-color: #1C8394;">
       <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-12">
@@ -64,7 +64,7 @@
 
                   <div class="col-lg-4 bg-grey">
                     <div class="p-5">
-                      <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                      <h3 class="fw-bold mb-5 mt-2 pt-1">Resumo</h3>
                       <hr class="my-4">
 
                       <div class="d-flex justify-content-between mb-4">
@@ -101,12 +101,12 @@
                       </div>
 
                       <div class="d-flex justify-content-between mb-4">
-                      <a href="/"> <h5>Voltar às compras</h5></a>
+                      <a href="/"><h4>Voltar</h4></a>
                       </div>
+                      
                       <form action="{{route('pedido.checkout')}}"  method="POST">
                       @csrf
-                      <button type="submit" class="btn btn-dark btn-block btn-lg"
-                        data-mdb-ripple-color="dark">Finalizar</button></form>
+                      <button type="submit" class="buttonfinalizar">Finalizar</button></form>
                 </form>
                     </div>
                   </div>

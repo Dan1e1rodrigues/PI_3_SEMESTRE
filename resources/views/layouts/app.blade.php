@@ -10,6 +10,9 @@
         <!-- LOGIN -->
         <link rel="stylesheet" type="text/css" href="/css/login.css" media="screen"/>
 
+        <!-- Icone da barra de navegação -->
+        <link rel="icon" type="image/png" href="/img/logoOficialOficial.png"/>
+
         <!-- CADASTRO -->
         <link rel="stylesheet" type="text/css" href="/css/cadastro.css" media="screen"/>
 
