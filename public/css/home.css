@@ -37,7 +37,7 @@
     margin-top: 10px;
     /*Alinhamento do texto...*/
     text-align: center;
-    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir 
+    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir
     coloca o padding que ele vai ajudar*/
     padding: 10%;
 }
@@ -47,7 +47,7 @@
     margin-top: 10px;
     /*Alinhamento do texto...*/
     text-align: center;
-    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir 
+    /*Caso vc queira ajustar o tamanho dos seus produtos ou até mesmo diminuir
     coloca o padding que ele vai ajudar*/
     padding: 5%;
 }
@@ -98,7 +98,7 @@ text-transform: uppercase;
 /* Cores do navbar editar para o padrão do PI & E-commerce*/
 /* Confirmar o esquema de cores, montar o padrão*/
 :root{
-    --bg-color:#fff; 
+    --bg-color:#fff;
     --text-color: #1C8394;
     --main-color: #A52502;
 }
@@ -155,7 +155,7 @@ header{
     margin-top: 15px;
 }
 
-/* Caso ocorra a necessidade de alterar o tamanho da letra altere por margin, pois caso ela fique com 
+/* Caso ocorra a necessidade de alterar o tamanho da letra altere por margin, pois caso ela fique com
 o tamanho muito grande irá quebrar a página */
 .navbar a{
     color: var(--text-color);
@@ -257,7 +257,7 @@ o tamanho muito grande irá quebrar a página */
     .navbar a.active{
         color: var(--text-color);
     }
-    
+
     .navbar.open{
         right: 2%;
     }

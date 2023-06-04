@@ -26,7 +26,7 @@ class CarrinhoController extends Controller
             ]);
         }
 
-        $enderecos = Endereco::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get();
+        // $enderecos = Endereco::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get();
         return redirect(route('carrinho.index'));
     }
 
