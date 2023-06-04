@@ -423,6 +423,64 @@ button:hover{
     cursor: pointer;
 }
 
+/* ------------------------------------- */
+.principal-yt{
+    width: 50%;
+    background-color: #1C8394;
+    position:static;
+    top:0px;
+    left:0%;
+    padding: 0px;
+    border-radius: 30px;
+    color:white;
+    margin-top: 5%;
+    margin-bottom: 0;
+    text-align: center;
+    transform: translate(50%,-10%);
+}
+
+.inputLogin{
+    padding: 10px;
+    border:none;
+    outline: none;
+    font-size: 15px;
+    color: black;
+}
+
+.button-nxy{
+    background-color: aqua;
+    border: none;
+    padding: 15px;
+    width: 50%;
+    border-radius: 10px;
+    color:white;
+    font-size: 15px;    
+    margin-top:5%;
+}
+
+button:hover{
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+.tc-yy{
+    width: 25%;
+    padding: 2%;
+    float: left;
+    margin: 2%;
+}
+
+.logo-yyt-log{
+    width: 10%;
+}
+
+div > label {
+    display: block;
+    margin-top:3%;
+}
+
+/* ------------------------------------- */
+
 
 
 
