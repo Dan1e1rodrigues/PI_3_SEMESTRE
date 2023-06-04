@@ -103,11 +103,11 @@
                       <div class="d-flex justify-content-between mb-4">
                       <a href="/"><h4>Voltar</h4></a>
                       </div>
-                      @if($enderecos!=null)
+
                         <form action="{{route('pedido.checkout')}}"  method="POST">
                         @csrf
                         <button type="submit" class="buttonfinalizar">Finalizar</button></form>
-                      @endif
+
                 </form>
                     </div>
                   </div>
