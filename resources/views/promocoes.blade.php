@@ -25,7 +25,7 @@
             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
             <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
             <p class="card-text">R${{$produto->PRODUTO_PRECO}}</p>
-            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" id="botaocard">Comprar</button></a>
+            <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" class="buttonLogin">Comprar</button></a>
         </div>
     </div>
 

@@ -95,16 +95,16 @@
                   <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   Olá, {{Auth::user()->USUARIO_NOME}}
                 </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li>
- <a class="dropdown-item"  href="/endereco">Meus Endereços</a>
-    </li>
-    <li>
- <a class="dropdown-item"  href="/pedido">Meus Pedidos</a>
-    </li>
-    <li>
-<a class="dropdown-item" href="{{route('usuarios.show', Auth::user()->USUARIO_ID)}}">Ver perfil</a>
-    </li>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li>
+                    <a class="dropdown-item"  href="/endereco">Meus Endereços</a>
+                        </li>
+                        <li>
+                    <a class="dropdown-item"  href="/pedido">Meus Pedidos</a>
+                        </li>
+                        <li>
+                    <a class="dropdown-item" href="{{route('usuarios.show', Auth::user()->USUARIO_ID)}}">Ver perfil</a>
+                     </li>
 
 
                 <form method="POST" action="{{ route('logout') }}">

@@ -31,7 +31,7 @@
                         </div>
                         <div class="col-md-3 col-lg-3 col-xl-3">
                           <h6 class="text-muted">{{$item->Produto->PRODUTO_NOME}}</h6>
-                          <h6 class="text-black mb-0">{{$item->Produto->PRODUTO_DESC}}</h6>
+                          <!-- <h6 class="text-black mb-0">{{$item->Produto->PRODUTO_DESC}}</h6> -->
                         </div>
                         <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                           <button class="btn btn-link px-2"
@@ -40,7 +40,7 @@
                           </button>
 
                           <input id="form1" min="1" name="quantity" value="{{$item -> ITEM_QTD}}"  type="number"
-                            class="form-control form-control-sm" />
+                            class="form-control form-control-sm" disabled/>
 
                           <button class="btn btn-link px-2"
                             onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
@@ -52,7 +52,7 @@
                           <h6 class="mb-0">R${{$item->Produto->PRODUTO_PRECO}}</h6>
                         </div>
                           @else
-                          <h6 class="mb-0">{{$item->Produto->PRODUTO_PRECO * $item-> ITEM_QTD}}</h6>
+                          <h6 class="mb-0">R${{$item->Produto->PRODUTO_PRECO * $item-> ITEM_QTD}}</h6>
                           @endif
                         <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                           <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>

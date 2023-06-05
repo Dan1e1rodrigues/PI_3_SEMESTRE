@@ -96,6 +96,9 @@
                         <li>
                     <a class="dropdown-item"  href="pedido">Meus Pedidos</a>
                         </li>
+                        <li>
+                    <a class="dropdown-item" href="{{route('usuarios.show', Auth::user()->USUARIO_ID)}}">Ver perfil</a>
+                        </li>
 
                 <form method="POST" action="{{ route('logout') }}">
 

@@ -59,7 +59,7 @@
                         <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
-                            <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
+                            <!-- <p class="card-text">{{$produto->PRODUTO_DESC}}</p> -->
                             <p class="card-text">R${{$produto->PRODUTO_PRECO}}</p>
                             <a href="{{route('produto.show', $produto->PRODUTO_ID)}}">
                             <button type="submit" class="buttonLogin">Comprar <i class="ri-shopping-cart-line"></i></button></a>
@@ -84,7 +84,7 @@
                     @endif
                         <div class="card-body">
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
-                            <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
+                            <!-- <p class="card-text">{{$produto->PRODUTO_DESC}}</p> -->
                             <p class="card-text">R${{$produto->PRODUTO_PRECO}}</p>
                             <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" class="buttonLogin">Comprar <i class="ri-shopping-cart-line"></i></button></a>
                         </div>
