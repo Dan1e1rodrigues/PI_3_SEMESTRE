@@ -8,12 +8,10 @@
     }
 
 </style>
-<h1>
-{{$categoria->CATEGORIA_NOME}}</h1>
 
+    <h1>Produtos abaixo de R$ 100,00</h1>
 
-
-@foreach($categoria->Produtos as $produto)
+   @foreach($produtos as $produto)
 
 
 
@@ -33,4 +31,4 @@
 
 
 @endforeach
-@endsection
+ @endsection

@@ -8,14 +8,9 @@
     }
 
 </style>
-    <h1 >Resultados para "{{$search}}"</h1>
-    <ul>
-        @if(count($produtos) < 1 )
-            <h3 >Não existem resultados para "{{$search}}"</h3>
-        @else
-        @foreach ($produtos as $produto)
+@foreach($produtos as $produto)
 
-        <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 30rem;">
                         @if (count($produto->ProdutoImagem)>0 )
                         <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
                         @else
@@ -30,8 +25,7 @@
                     </div>
 
 
-            @endforeach
-        @endif
-    </ul>
 
-@endsection
+
+@endforeach
+ @endsection

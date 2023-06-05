@@ -48,7 +48,7 @@
             <!--Pode ser editavel-->
             <ul class="navbar">
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="#">Mais vendidos</a></li>
+                <li><a href="todos">Nossos produtos</a></li>
                 <li>
                 <div class="dropdown">
   <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,7 @@
 
                 <!-- <li><a href="#">Blog</a></li>
                 <li><a href="#">Contato</a></li> -->
-                <li><a href="#">Promoções</a></li>
+                <li><a href="/promocoes">Promoções</a></li>
             </ul>
             @if(!Auth::check())
             <div class="main">

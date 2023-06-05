@@ -89,7 +89,8 @@
                                 <option value="TO">TO</option>
                         </select>
                         <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ENDERECO_APAGADO" value="b'1'" id="flexRadioDefault1">
+
+                    <input class="form-check-input" type="radio" name="ENDERECO_APAGADO" value="1" id="flexRadioDefault1">
                     <label class="form-check-label" for="flexRadioDefault1">
                         Quero apagar
                     </label>
