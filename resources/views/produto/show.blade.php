@@ -4,7 +4,7 @@
 @section('main')
 <script>
         function login() {
-            window.alert('Você deve estar logado para acessar o carrinho!');
+            window.alert('Você precisa de uma conta para acessar o carrinho!');
         }
         // function aviso(){
         //     alert('Você deve inserir a quantidade que deseja!');

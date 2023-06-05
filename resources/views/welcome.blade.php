@@ -72,11 +72,15 @@
                     <span class="title-secundary">Mais Vendidos</span>
                     <hr>
                     <div class="row row-cols-1 row-cols-md-3 g-4">
-            @foreach(\App\Models\Produto::all()->take(5) as $produto)
+            @foreach(\App\Models\Produto::all()->take(6) as $produto)
 
                 <div class="col">
                     <div class="card">
-                        <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
+                    @if (count($produto->ProdutoImagem)>0 )
+                    <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
+                    @else
+                    <img src="../img/indisponivel.jpg" class="card-img-top" alt="...">
+                    @endif
                         <div class="card-body">
                             <h5 class="card-title">{{$produto->PRODUTO_NOME}}</h5>
                             <p class="card-text">{{$produto->PRODUTO_DESC}}</p>
@@ -85,27 +89,7 @@
                     </div>
                 </div>
             @endforeach
-                        <div class="col">
-                            <div class="card">
-                                <img src="./IMG/vitrine02.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <!-- <h5 class="card-title">Bicicleta Vermelha</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo inventore quibusdam enim ex quisquam, deleniti alias nihil harum. Asperiores harum modi cumque vel corporis vero quidem nihil laudantium fugiat soluta.</p>
-                                    <button type="submit">Comprar</button> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="./IMG/vitrine03.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <!-- <h5 class="card-title">Bermuda Tactel</h5>
-                                    <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate alias ab voluptatem et distinctio soluta voluptatum animi, sunt laborum iusto repellat veniam accusamus dignissimos sed! Eveniet repellendus vitae sequi molestiae?</p>
-                                    <button type="submit">Comprar</button> -->
-                                </div>
-                             </div>
-                            </div>
-                        </div>
+
                         </section>
                      </section>
 

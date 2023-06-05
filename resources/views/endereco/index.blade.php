@@ -1,9 +1,17 @@
 @extends('layout.app')
 @section('main')
 
+@if(count($enderecos) < 1 )
+    <h1>Você ainda não tem nenhum endereço cadastrado.</h1>
+    <a href="{{route('endereco.create')}}">
 
-    <section>
-        <h1>ENDEREÇO</h1>
+        <button type="submit" class="btn btn-dark btn-block btn-lg"
+        data-mdb-ripple-color="dark">Cadastrar novo endereço</button>
+        </a>
+
+@else
+            <section>
+        <h1> Meus endereços</h1>
         <div class="tabela-ty">
     <table class="table">
         <thead class="table-secondary">
@@ -16,6 +24,8 @@
                 <th scope="col">CEP</th>
                 <th scope="col">CIDADE</th>
                 <th scope="col">ESTADO</th>
+                <th scope="col">ATUALIZAR</th>
+
 
             </tr>
         </thead>
@@ -28,6 +38,7 @@
                 <td>{{$endereco->ENDERECO_CEP}}</td>
                 <td>{{$endereco->ENDERECO_CIDADE}}</td>
                 <td>{{$endereco->ENDERECO_ESTADO}}</td>
+                <td> <a href="{{route('endereco.edit',['endereco'=>$endereco->ENDERECO_ID])}} " class="btn btn-primary" role="button">Editar</a></td></td>
 
             </tr>
         @endforeach
@@ -43,4 +54,5 @@
             </ol>
         </table>
     </section>
+    @endif
 @endsection

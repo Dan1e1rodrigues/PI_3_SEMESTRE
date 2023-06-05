@@ -1,15 +1,23 @@
 @extends('layout.app')
     @section('main')
+    <style>
+    .card{
+        display: inline-block;
+       margin-top: 3%;
+        position: relative;
+    }
 
-<h1> 
+</style>
+<h1>
 {{$categoria->CATEGORIA_NOME}}</h1>
 
 
 
 @foreach($categoria->Produtos as $produto)
-<div class="row row-cols-1 row-cols-md-4 g-4">
-<div class="col">
-    <div class="card">
+
+
+
+<div class="card" style="width: 18rem;">
         @if (count($produto->ProdutoImagem)>0 )
         <img src="{{$produto->ProdutoImagem[0]->IMAGEM_URL}}" class="card-img-top" alt="...">
         @else
@@ -21,7 +29,7 @@
             <a href="{{route('produto.show', $produto->PRODUTO_ID)}}"><button type="submit" id="botaocard">Comprar</button></a>
         </div>
     </div>
-</div>
-</div>
+
+
 @endforeach
 @endsection

@@ -1,6 +1,10 @@
 @extends('layout.app')
 @section('main')
 
+@if(session()->has('message'))
+            {{session()->get('message')}}
+        @endif
+
     <script>
 
      function semLetra(a){
@@ -14,45 +18,48 @@
      }
      </script>
 
+
     <div class="principal-yt">
     <section>
         <table>
             <ol>
                 <li>
-                    <form action="{{route('endereco.store')}}"  method="POST">
+                <form action="{{route('endereco.update',['endereco'=>$endereco->ENDERECO_ID])}}" method="post" >
                       @csrf
+                      <input type="hidden" name="_method" value="PUT">
                         <div>
                             <label for="">Nome(Ex:casa, trabalho e etc.)</label>
-                            <input class="inputLogin" type="text" name="ENDERECO_NOME" required>
+                            <input class="inputLogin" type="text" name="ENDERECO_NOME" value="{{$endereco->ENDERECO_NOME}}" required>
                         </div>
 
                         <div>
                             <label for="">LOGRADOURO</label>
-                            <input class="inputLogin" type="text" name="ENDERECO_LOGRADOURO" required>
+                            <input class="inputLogin" type="text" name="ENDERECO_LOGRADOURO" value="{{$endereco->ENDERECO_LOGRADOURO}}" required>
                         </div>
 
                         <div>
                             <label for="">N° Residência</label>
-                            <input class="inputLogin" type="text" name="ENDERECO_NUMERO" onkeypress="return semLetra(event)" required>
+                            <input class="inputLogin" type="text" name="ENDERECO_NUMERO" value="{{$endereco->ENDERECO_NUMERO}}" required>
                         </div>
 
                         <div>
                             <label for="">Complemento</label>
-                            <input class="inputLogin" type="text" name="ENDERECO_COMPLEMENTO" required>
+                            <input class="inputLogin" type="text" name="ENDERECO_COMPLEMENTO" value="{{$endereco->ENDERECO_COMPLEMENTO}}"required>
                         </div>
 
                         <div>
                             <label for="">CEP</label>
-                            <input class="inputLogin" type="text" name="ENDERECO_CEP" required minlength=8 maxlength=8 onkeypress="return semLetra(event)">
+                            <input class="inputLogin" type="text" name="ENDERECO_CEP" value="{{$endereco->ENDERECO_CEP}}" required minlength=8 maxlength=8 onkeypress="return semLetra(event)">
                         </div>
                         <div>
                             <label for="">Cidade</label>
-                            <input class="inputLogin" type="text" name="ENDERECO_CIDADE" required>
+                            <input class="inputLogin" type="text" name="ENDERECO_CIDADE" value="{{$endereco->ENDERECO_CIDADE}}" required>
                         </div>
                         <div>
                             <label for="">Estado</label>
                             <select  class="inputLogin" name="ENDERECO_ESTADO" required>
-                                <option value="">Selecione</option>
+
+                                <option selected value="{{$endereco->ENDERECO_ESTADO}}">{{$endereco->ENDERECO_ESTADO}}</option>
                                 <option value="AC">AC</option>
                                 <option value="AL">AL</option>
                                 <option value="AP">AP</option>
@@ -81,8 +88,14 @@
                                 <option value="SE">SE</option>
                                 <option value="TO">TO</option>
                         </select>
-                        </div>
-                      <button type="submit" class="button-nxy">Inserir</button>
+                        <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ENDERECO_APAGADO" value="b'1'" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Quero apagar
+                    </label>
+
+                    </div>
+                      <button type="submit" class="button-nxy">Atualizar</button>
                     </form>
                 </li>
             </ol>

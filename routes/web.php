@@ -17,6 +17,7 @@ use App\Http\Controllers\CarrinhoController;
 use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\UsuarioController;
 
 
 
@@ -31,6 +32,9 @@ Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.ind
 Route::get('/endereco',[EnderecoController::class,'index'])->name('endereco.index');
 Route::post('/endereco/store',[EnderecoController::class,'store'])->name('endereco.store');
 Route::get("/endereco/create", [EnderecoController::class, "create"])->name('endereco.create');
+Route::get('/endereco/{endereco}/edit',[EnderecoController::class,'edit'])->name('endereco.edit');
+Route::put('/endereco/{endereco}',[EnderecoController::class,'update'])->name('endereco.update');
+Route::put('/endereco/{end}',[EnderecoController::class,'delete'])->name('endereco.delete');
 
 Route::post('/pedido',[PedidoController::class,'checkout'])->name('pedido.checkout');
 Route::get('/pedido',[PedidoController::class,'index'])->name('pedido.index');
@@ -64,3 +68,6 @@ Route::get('/categoria/{categoria}',[CategoriaController::class,'show'])->name('
 Route::get('/produto',[ProdutoController::class,'index']);// controllee-class-funcão dentro da controller(site)
 Route::get('/produto/{produto}',[ProdutoController::class,'show'])->name('produto.show');//aqui , no servidor, será produto/1
 
+Route::get('/users/{user}/edit',[UsuarioController::class,'edit'])->name('usuarios.edit');
+Route::put('/users/{user}',[UsuarioController::class,'update'])->name('usuarios.update');
+Route::get('/users/{user}',[UsuarioController::class,'show'])->name('usuarios.show');// controllee-class-funcão dentro da controller(site)

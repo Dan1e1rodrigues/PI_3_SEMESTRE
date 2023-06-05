@@ -9,8 +9,15 @@ use Illuminate\Support\Facades\Redirect;
 
 class EnderecoController extends Controller
 {
+    public function __construct()
+    {
+     $this->endereco = new Endereco();
+     $this->end = new Endereco();
+    }
+
     public function index(){
-        $enderecos = Endereco::where('USUARIO_ID', Auth::user()->USUARIO_ID)->get();//retorna todos os produtos e guarda nessa variavel
+        $enderecos = Endereco::where('USUARIO_ID', Auth::user()->USUARIO_ID, ['ENDERECO_APAGADO','<=','1'])->get();//retorna todos os produtos e guarda nessa variavel
+
 
         return view('endereco.index')->with('enderecos',$enderecos);//retorna a view numa pasta(n pode ser no plural, pois é o q está na model) e o arquivo("".blade.php)
 
@@ -33,5 +40,24 @@ class EnderecoController extends Controller
         ]);
         return redirect ('endereco');
       }
+
+      public function edit(Endereco $endereco){
+        return view('endereco.edit',['endereco'=>$endereco]);
+
+      }
+
+      public function update(Request $request, string $id){
+
+
+        $atualizado = $this->endereco->where('ENDERECO_ID',$id)->update($request->except(['_token', '_method']));
+
+        if($atualizado){
+            return redirect('endereco')->with('message','Atualizado com sucesso!');
+
+        }else{
+            return redirect('endereco')->with('message','Ocorreu algum erro, tente novamente mais tarde');
+        }
+      }
+
 
 }

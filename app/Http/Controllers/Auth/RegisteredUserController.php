@@ -41,7 +41,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
-
-        return redirect('endereco');
+       //   echo "<script language='javascript' type='text/javascript'>alert('Usuário cadastrado com sucesso!!!');";
+        return redirect('/');
     }
 }

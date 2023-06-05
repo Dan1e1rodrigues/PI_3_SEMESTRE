@@ -6,7 +6,7 @@
     <title>Delta</title>
 </head>
 <body>
-    
+
 <div>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -14,8 +14,8 @@
     <form method="POST" action="{{ route('login') }}">
 
         @csrf
-        
-        
+
+
     <div class="login">
         <div class="logo-yyt-logo-lo">
             <img class="logo-yyt-logo-login" src="/img/logoOficialOficial.png">
