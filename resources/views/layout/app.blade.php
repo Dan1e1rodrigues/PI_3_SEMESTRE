@@ -10,6 +10,9 @@
     <!-- <link rel="shortcut icon" href="{{ asset('logoOficial.png') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('logoOficial.png') }}" type="image/x-icon"> -->
 
+    <!-- Icone na barra de navegação -->
+    <link rel="icon" type="image/png" href="/img/logoOficialOficial.png"/>
+
     <!-- Link CSS -->
     <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen"/>
 
@@ -34,7 +37,7 @@
         <!-- Barra de navegação -->
         <header>
             <!-- Possibilidade de colocar um favcon aqui -->
-            <img  src="/img/logoOficial.png" width="10%"class="logo">
+            <img  src="/img/logoOficialOficial.png" width="10%"class="logo">
                 <!-- Favcon -->
                 <!-- <i class="ri-home-heart-fill"></i> -->
                 <!-- Tex0to -->
@@ -106,7 +109,7 @@
 
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-                    <button onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
+                    <button class="buttonsair"onclick="event.preventDefault();this.closest('form').submit();">Sair</button>
                 </form>
                 <div class="bx bx-menu" id="menu-icon"></div>
             </div>
