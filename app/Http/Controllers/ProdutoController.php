@@ -21,7 +21,7 @@ class ProdutoController extends Controller
 
 
 
-    return view('produto.index',['produtos'=>$produtos,'search'=>$search]);//retorna a view numa pasta(n pode ser no plural, pois é o q está na model) e 
+    return view('produto.index',['produtos'=>$produtos,'search'=>$search]);//retorna a view numa pasta(n pode ser no plural, pois é o q está na model) e
     }
 
     public function show(Produto $produto){ // model e variavel
@@ -29,7 +29,7 @@ class ProdutoController extends Controller
      // retorna só um produto
       //return view('produto.show')->with('produto',$produto);
    $maisProdutos = Categoria::find($produto->CATEGORIA_ID)->Produtos;
-      return view ('produto.show', ['produto' =>$produto,'maisProdutos' => $maisProdutos]);   
+      return view ('produto.show', ['produto' =>$produto,'maisProdutos' => $maisProdutos]);
 
     }
 
