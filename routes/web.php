@@ -18,13 +18,36 @@ use App\Http\Controllers\PedidoController;
 use App\Http\Controllers\EnderecoController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UsuarioController;
-
-
+use App\Models\Produto;
+use App\Models\Pedido;
+use App\Models\PeditoItem;
 
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/promocoes', function () {
+    $produtos=Produto::where([
+        ['PRODUTO_PRECO','<=',100]//query do banco
+    ])->get();
+    return view('promocoes',['produtos'=>$produtos]);
+});
+
+Route::get('/todos', function () {
+
+
+    $produtos = Produto::all();
+
+
+
+
+  return view('todos')->with('produtos',$produtos);
+
+
+});
+
 
 Route::post('/carrinho/{produto}',[CarrinhoController::class,'store'])->name('carrinho.store');
 Route::get('/carrinho',[CarrinhoController::class, 'index'])->name('carrinho.index');
