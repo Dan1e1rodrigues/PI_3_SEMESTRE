@@ -48,7 +48,7 @@
             <!--Pode ser editavel-->
             <ul class="navbar">
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="todos">Nossos produtos</a></li>
+                <li><a href="/todos">Nossos produtos</a></li>
                 <li>
                 <div class="dropdown">
   <button class="btn btn-transparent dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

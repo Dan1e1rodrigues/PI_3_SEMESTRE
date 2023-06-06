@@ -8,6 +8,7 @@
     }
 
 </style>
+<h1>Todos os nossos produtos</h1>
 @foreach($produtos as $produto)
 
     <div class="card" style="width: 30rem;">

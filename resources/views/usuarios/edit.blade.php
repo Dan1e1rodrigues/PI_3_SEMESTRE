@@ -29,13 +29,14 @@
                                 
                                 <button type="submit" class="d-flex justify-content-end btn btn-primary btn-lg ms-auto mb-4 p-2 fs-6">Editar</button>
 
-                                <div class="d-flex justify-content-between mb-4">
-                                    <a href="usuarios.show">
+                              
+                                    </div>
+                        </form>
+                        <div class="d-flex justify-content-between mb-4">
+                                    <a href="/">
                                         <button type="submit" class="buttonvolt">Voltar</button>
                                     </a>
 
-                                    </div>
-                        </form>
 
 
                     </div>
